@@ -3,6 +3,8 @@
 #pragma once
 
 // Common
+extern ECORE_API	u32			ps_r2_smap_size;
+extern ECORE_API	xr_token	qr2_smap_size_token[];
 extern ENGINE_API	int			ps_r__Supersample;
 extern ECORE_API	int			ps_r__LightSleepFrames;
 

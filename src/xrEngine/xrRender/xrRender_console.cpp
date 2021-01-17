@@ -13,6 +13,15 @@ xr_token							qpreset_token							[ ]={
 	{ 0,							0											}
 };
 
+u32			ps_r2_smap_size			= 2048;
+xr_token	qr2_smap_size_token[]	= {
+	{	"1k",	1024	},
+	{	"2k",	2048	},
+	{	"4k",	4096	},
+	{	"8k",	8192	},
+	{	0,		0		}
+};
+
 // Common
 //int		ps_r__Supersample			= 1		;
 int			ps_r__LightSleepFrames		= 10	;
@@ -383,6 +392,7 @@ void		xrRender_initconsole	()
 
 	tw_min.set			(0,0,0);	tw_max.set	(1,1,1);
 	CMD4(CCC_Vector3,	"r2_aa_weight",			&ps_r2_aa_weight,			tw_min, tw_max	);
+	CMD3(CCC_Token,		"r2_smap_size",			&ps_r2_smap_size,			qr2_smap_size_token	);
 }
 
 void	xrRender_apply_tf		()
