@@ -34,6 +34,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrSound", "src\xrSound\xrSo
 		{A0F7D1FB-59A7-4717-A7E4-96F37E91998E} = {A0F7D1FB-59A7-4717-A7E4-96F37E91998E}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrNetServer", "src\xrNetServer\xrNetServer.vcxproj", "{435BAC9A-B225-457D-AB40-C9BD0CC8838C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A0F7D1FB-59A7-4717-A7E4-96F37E91998E} = {A0F7D1FB-59A7-4717-A7E4-96F37E91998E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -136,6 +141,18 @@ Global
 		{CCCA7859-EB86-493E-9B53-C4235F45B3C5}.Template|Win32.ActiveCfg = Template|Win32
 		{CCCA7859-EB86-493E-9B53-C4235F45B3C5}.Template|Win32.Build.0 = Template|Win32
 		{CCCA7859-EB86-493E-9B53-C4235F45B3C5}.Template|x64.ActiveCfg = Template|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Debug|Win32.Build.0 = Debug|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Debug|x64.ActiveCfg = Debug|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Mixed|Win32.ActiveCfg = Mixed|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Mixed|Win32.Build.0 = Mixed|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Mixed|x64.ActiveCfg = Mixed|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Release|Win32.ActiveCfg = Release|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Release|Win32.Build.0 = Release|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Release|x64.ActiveCfg = Release|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Template|Win32.ActiveCfg = Template|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Template|Win32.Build.0 = Template|Win32
+		{435BAC9A-B225-457D-AB40-C9BD0CC8838C}.Template|x64.ActiveCfg = Template|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

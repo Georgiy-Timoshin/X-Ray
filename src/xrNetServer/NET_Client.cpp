@@ -4,12 +4,12 @@
 #include "net_server.h"
 #include "net_messages.h"
 #include "NET_Log.h"
-#include "../xr_3da/xrGame/battleye.h"
+#include "../xrEngine/xrGame/battleye.h"
 
 #pragma warning(push)
 #pragma warning(disable:4995)
 #include <malloc.h>
-#include "dxerr9.h"
+#include "dxerr.h"
 //#pragma warning(pop)
 
 static	INetLog* pClNetLog = NULL; 
