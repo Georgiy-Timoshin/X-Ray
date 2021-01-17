@@ -228,7 +228,7 @@ void CHangingLamp::UpdateCL	()
 		
 		if (lanim){
 			int frame;
-			u32 clr					= lanim->CalculateBGR(Device.fTimeGlobal,frame); // ���������� � ������� BGR
+			u32 clr					= lanim->CalculateBGR(Device.fTimeGlobal,frame); // возвращает в формате BGR
 			Fcolor					fclr;
 			fclr.set				((float)color_get_B(clr),(float)color_get_G(clr),(float)color_get_R(clr),1.f);
 			fclr.mul_rgb			(fBrightness/255.f);
@@ -262,7 +262,8 @@ void CHangingLamp::TurnOff	()
 	if (glow_render)	glow_render->set_active		(false);
 	if (light_ambient)	light_ambient->set_active	(false);
 	if (Visual())		smart_cast<CKinematics*>(Visual())->LL_SetBoneVisible(light_bone, FALSE, TRUE);
-	if(!PPhysicsShell())//if we have physiccs_shell it will call processing deactivate when disable
+//	Исправление вылета при 255 и более вкл. и выкл. лампочки
+//	if(!PPhysicsShell())//if we have physiccs_shell it will call processing deactivate when disable
 		processing_deactivate	();
 		
 }
