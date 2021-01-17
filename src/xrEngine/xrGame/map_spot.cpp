@@ -23,6 +23,14 @@ CMapSpot::~CMapSpot()
 void CMapSpot::Load(CUIXml* xml, LPCSTR path)
 {
 	CUIXmlInit::InitStatic(*xml,path,0,this);
+
+	// Глобальная карта и карты локации: исправление растянутых меток на широкоформатных мониторах
+	if (!Heading())
+	{
+		SetWidth(GetWidth() * UI()->get_current_kx());
+		SetStretchTexture(true);
+	}
+
 	int i = xml->ReadAttribInt(path, 0, "scale", 0);
 	m_bScale			= (i==1);
 
