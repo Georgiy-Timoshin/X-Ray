@@ -15,14 +15,14 @@
 #pragma comment(lib,"ode.lib")
 #pragma comment(lib,"xrEngine.lib")
 
-#ifdef NDEBUG
+/*#ifdef NDEBUG
 namespace std {
 	void terminate()
 	{
 		abort();
 	}
 }
-#endif // #ifdef NDEBUG
+#endif // #ifdef NDEBUG*/
 
 extern "C" {
 	DLL_API DLL_Pure*	__cdecl xrFactory_Create		(CLASS_ID clsid)
