@@ -31,6 +31,8 @@ void        hmodel                 (out half3 hdiffuse, out half3 hspecular, hal
         // diffuse color
         half3         e0d               = texCUBE         (env_s0,nw);
         half3         e1d               = texCUBE         (env_s1,nw);
+                      e0d               = (e0d.r + e0d.g + e0d.b) / 3.h;
+                      e1d               = (e1d.r + e1d.g + e1d.b) / 3.h;
         half3         env_d             = env_color.xyz*lerp(e0d,e1d,env_color.w)        ;
 					env_d*=env_d;		// contrast
         hdiffuse                        = env_d * light.xyz + L_ambient.rgb;
