@@ -467,7 +467,7 @@ namespace luabind
 						const constructor<BOOST_PP_ENUM_PARAMS(LUABIND_MAX_ARITY, A)>*)
 			{
 				// TODO: use policies here, instead of default_policy, or shouldn't we?
-				typename boost::mpl::apply_if_c<Constant,
+				typename boost::mpl::eval_if_c<Constant,
 					LUABIND_MSVC6_NO_TYPENAME default_policy::template generate_converter<const Self_&, lua_to_cpp>,
 					LUABIND_MSVC6_NO_TYPENAME default_policy::template generate_converter<Self_&, lua_to_cpp>
 				>::type conv_self;

@@ -82,7 +82,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;XR_NETSERVER_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -145,7 +145,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>MIXED;WIN32;DEBUG;_WINDOWS;XR_NETSERVER_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -200,7 +200,7 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\xrCore\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;WIN32;_WINDOWS;XR_NETSERVER_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>

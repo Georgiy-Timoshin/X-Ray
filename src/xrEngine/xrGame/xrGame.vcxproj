@@ -157,7 +157,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -215,7 +215,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
@@ -276,7 +276,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
@@ -337,7 +337,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -395,7 +395,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
@@ -456,7 +456,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4237;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_75_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\loki\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
