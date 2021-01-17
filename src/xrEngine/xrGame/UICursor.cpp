@@ -12,7 +12,9 @@
 CUICursor::CUICursor()
 {    
 	bVisible				= false;
-	vPos.set				(0.f,0.f);
+	// Исправление центрирования курсора в главном меню при запуске игры
+	vPrevPos.set			(UI_BASE_WIDTH / 2, UI_BASE_HEIGHT /2);
+	vPos.set				(UI_BASE_WIDTH / 2, UI_BASE_HEIGHT /2);
 	InitInternal			();
 	Device.seqRender.Add	(this,2);
 }

@@ -25,6 +25,7 @@ public:
 	void			UpdateCursorPosition	();
 
 	bool			IsVisible		() {return bVisible;}
-	void			Show			() {bVisible = true;}
-	void			Hide			() {bVisible = false;}
+	// Исправление "залипания" курсора мыши в игровых меню
+	void			Show			() {SetUICursorPosition(vPrevPos);bVisible = true;}
+	void			Hide			() {vPrevPos = GetCursorPosition();bVisible = false;}
 };
