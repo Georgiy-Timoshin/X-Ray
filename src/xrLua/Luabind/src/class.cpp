@@ -21,11 +21,11 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 #define LUA_LIB
 
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/config.hpp>
-#include <luabind/class.hpp>
-#include <luabind/detail/get_signature.hpp>
+#include "../luabind/config.hpp"
+#include "../luabind/class.hpp"
+#include "../luabind/detail/get_signature.hpp"
 
 #include <cstring>
 //#include <iostream>
@@ -35,12 +35,12 @@ void boost::throw_exception	( std::exception const & )
 	abort();
 }
 
-/*#ifdef NDEBUG
-void std::terminate()
-{
-	abort();
-}
-#endif // #ifdef NDEBUG*/
+//#ifdef NDEBUG
+//void std::terminate()
+//{
+//	abort();
+//}
+//#endif // #ifdef NDEBUG
 
 namespace luabind { namespace detail {
 

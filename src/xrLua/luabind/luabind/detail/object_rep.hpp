@@ -24,8 +24,8 @@
 #ifndef LUABIND_OBJECT_REP_HPP_INCLUDED
 #define LUABIND_OBJECT_REP_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/detail/ref.hpp>
+#include "../luabind/config.hpp"
+#include "ref.hpp"
 
 namespace luabind { namespace detail
 {

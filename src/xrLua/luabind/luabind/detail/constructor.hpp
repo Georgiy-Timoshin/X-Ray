@@ -33,13 +33,13 @@
 #include <boost/preprocessor/repeat.hpp>
 #include <boost/preprocessor/comma_if.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/wrapper_base.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/call_member.hpp>
-#include <luabind/wrapper_base.hpp>
-#include <luabind/weak_ref.hpp>
+#include "../luabind/config.hpp"
+#include "../luabind/wrapper_base.hpp"
+#include "policy.hpp"
+#include "signature_match.hpp"
+#include "call_member.hpp"
+#include "../luabind/wrapper_base.hpp"
+#include "../luabind/weak_ref.hpp"
 
 namespace luabind { namespace detail
 {
@@ -49,7 +49,7 @@ namespace luabind { namespace detail
 	template<int N>
 	struct wrapped_constructor_helper;
 	
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/constructor.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "constructor.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 	template<class T, class Policies, class ConstructorSig>

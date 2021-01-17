@@ -32,13 +32,13 @@
 #include <boost/type_traits/is_void.hpp>
 #include <boost/mpl/if.hpp>
 
-#include <luabind/prefix.hpp>
-#include <luabind/config.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/detail/convert_to_lua.hpp>
-#include <luabind/detail/pcall.hpp>
-#include <luabind/error.hpp>
-#include <luabind/detail/stack_utils.hpp>
+#include "prefix.hpp"
+#include "config.hpp"
+#include "detail/policy.hpp"
+#include "detail/convert_to_lua.hpp"
+#include "detail/pcall.hpp"
+#include "error.hpp"
+#include "detail/stack_utils.hpp"
 
 namespace luabind
 {
@@ -417,7 +417,7 @@ namespace luabind
 			ref_.reset();
 		}
 
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/functor.hpp>, 1))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "functor.hpp", 1))
 		#include BOOST_PP_ITERATE()
 
 // TODO: should be private

@@ -20,33 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
-#define LUA_LIB
-#include <luabind/detail/pcall.hpp>
-#include <luabind/error.hpp>
-#include <luabind/lua_include.hpp>
+#include "../luabind/detail/link_compatibility.hpp"
 
 namespace luabind { namespace detail
 {
-	int pcall(lua_State *L, int nargs, int nresults)
-	{
-		pcall_callback_fun e = get_pcall_callback();
-		int en = 0;
-		if ( e )
-		{
-			int base = lua_gettop(L) - nargs;
-			lua_pushcfunction(L, e);
-			lua_insert(L, base);  // push pcall_callback under chunk and args
-			en = base;
-  		}
-		int result = lua_pcall(L, nargs, nresults, en);
-		if ( en )
-			lua_remove(L, en);  // remove pcall_callback
-		return result;
-	}
 
-	int resume_impl(lua_State *L, int nargs, int)
-	{
-		return lua_resume(L, nargs);
-	}
+#ifdef LUABIND_NOT_THREADSAFE
+	void not_threadsafe_defined_conflict() {}
+#else
+	void not_threadsafe_not_defined_conflict() {}
+#endif
+
+#ifdef LUABIND_NO_ERROR_CHECKING
+	void no_error_checking_defined_conflict() {}
+#else
+	void no_error_checking_not_defined_conflict() {}
+#endif
 
 }}
+

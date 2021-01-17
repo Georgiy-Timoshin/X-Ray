@@ -23,8 +23,8 @@
 #ifndef BACK_REFERENCE_040510_HPP
 #define BACK_REFERENCE_040510_HPP
 
-#include <luabind/lua_include.hpp>
-#include <luabind/wrapper_base.hpp>
+#include "lua_include.hpp"
+#include "wrapper_base.hpp"
 #include <boost/type_traits/is_polymorphic.hpp>
 #include <boost/mpl/if.hpp>
 

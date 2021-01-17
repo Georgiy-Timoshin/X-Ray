@@ -29,17 +29,17 @@
 #include <boost/limits.hpp>
 #include <boost/preprocessor/repetition/enum_params_with_a_default.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/construct_rep.hpp>
-#include <luabind/detail/method_rep.hpp>
-#include <luabind/detail/garbage_collector.hpp>
-#include <luabind/detail/operator_id.hpp>
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/class_registry.hpp>
-#include <luabind/detail/find_best_match.hpp>
-#include <luabind/detail/get_overload_signature.hpp>
-#include <luabind/error.hpp>
+#include "../luabind/config.hpp"
+#include "object_rep.hpp"
+#include "construct_rep.hpp"
+#include "method_rep.hpp"
+#include "garbage_collector.hpp"
+#include "operator_id.hpp"
+#include "signature_match.hpp"
+#include "class_registry.hpp"
+#include "find_best_match.hpp"
+#include "get_overload_signature.hpp"
+#include "../luabind/error.hpp"
 
 namespace luabind
 {

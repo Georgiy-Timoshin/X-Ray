@@ -21,11 +21,11 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/scope.hpp>
-#include <luabind/detail/debug.hpp>
-#include <luabind/detail/stack_utils.hpp>
+#include "../luabind/scope.hpp"
+#include "../luabind/detail/debug.hpp"
+#include "../luabind/detail/stack_utils.hpp"
 #include <cassert>
 
 namespace luabind { namespace detail {

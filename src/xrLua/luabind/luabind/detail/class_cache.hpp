@@ -23,7 +23,7 @@
 #ifndef CLASS_CACHE_040218_HPP
 #define CLASS_CACHE_040218_HPP
 
-#include <luabind/prefix.hpp>
+#include "../luabind/prefix.hpp"
 #include <boost/type_traits/add_reference.hpp>
 #include <boost/type_traits/add_const.hpp>
 

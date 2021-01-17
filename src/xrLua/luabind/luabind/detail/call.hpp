@@ -37,9 +37,9 @@
 #include <boost/preprocessor/cat.hpp>
 #include <boost/mpl/bool.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/yield_policy.hpp>
+#include "../luabind/config.hpp"
+#include "policy.hpp"
+#include "../luabind/yield_policy.hpp"
 
 #define LUABIND_DECL(z, n, off) \
 	typedef typename find_conversion_policy< \
@@ -105,18 +105,18 @@ namespace luabind { namespace detail
 	template<class T>
 	struct returns
 	{
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/call.hpp>, 1))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "call.hpp", 1))
 		#include BOOST_PP_ITERATE()
 	};
 
 	template<>
 	struct returns<void>
 	{
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/call.hpp>, 2))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "call.hpp", 2))
 		#include BOOST_PP_ITERATE()
 	};
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/call.hpp>, 3))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "call.hpp", 3))
 	#include BOOST_PP_ITERATE()
 }}
 

@@ -20,57 +20,39 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
-#include <luabind/error.hpp>
+#define LUA_LIB
+#include "../luabind/config.hpp"
+#include "../luabind/lua_include.hpp"
+#include "../luabind/detail/object_rep.hpp"
+#include "../luabind/detail/class_rep.hpp"
+#include "../luabind/detail/stack_utils.hpp"
 
-
-namespace luabind
+namespace luabind { namespace detail
 {
-
-	namespace
+	LUABIND_API void do_call_member_selection(lua_State* L, char const* name)
 	{
-		pcall_callback_fun pcall_callback = 0;
-#ifdef LUABIND_NO_EXCEPTIONS
-		error_callback_fun error_callback = 0;
-		cast_failed_callback_fun cast_failed_callback = 0;
-#endif
+		object_rep* obj = static_cast<object_rep*>(lua_touserdata(L, -1));
+		lua_pop(L, 1); // pop self
+
+		obj->crep()->get_table(L); // push the crep table
+		lua_pushstring(L, name);
+		lua_gettable(L, -2);
+		lua_remove(L, -2); // remove the crep table
+
+		{
+			if (!lua_iscfunction(L, -1)) return;
+			if (lua_getupvalue(L, -1, 3) == 0) return;
+			detail::stack_pop p(L, 1);
+			if (lua_touserdata(L, -1) != reinterpret_cast<void*>(0x1337)) return;
+		}
+
+		// this (usually) means the function has not been
+		// overridden by lua, call the default implementation
+		lua_pop(L, 1);
+		obj->crep()->get_default_table(L); // push the crep table
+		lua_pushstring(L, name);
+		lua_gettable(L, -2);
+		assert(!lua_isnil(L, -1));
+		lua_remove(L, -2); // remove the crep table
 	}
-
-
-#ifdef LUABIND_NO_EXCEPTIONS
-
-	typedef void(*error_callback_fun)(lua_State*);
-	typedef void(*cast_failed_callback_fun)(lua_State*, LUABIND_TYPE_INFO);
-
-	void set_error_callback(error_callback_fun e)
-	{
-		error_callback = e;
-	}
-
-	void set_cast_failed_callback(cast_failed_callback_fun c)
-	{
-		cast_failed_callback = c;
-	}
-
-	error_callback_fun get_error_callback()
-	{
-		return error_callback;
-	}
-
-	cast_failed_callback_fun get_cast_failed_callback()
-	{
-		return cast_failed_callback;
-	}
-
-#endif
-
-	void set_pcall_callback(pcall_callback_fun e)
-	{
-		pcall_callback = e;
-	}
-
-	pcall_callback_fun get_pcall_callback()
-	{
-		return pcall_callback;
-	}
-
-}
+}}

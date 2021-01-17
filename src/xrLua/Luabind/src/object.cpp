@@ -21,10 +21,10 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/luabind.hpp>
-#include <luabind/detail/implicit_cast.hpp>
+#include "../luabind/luabind.hpp"
+#include "../luabind/detail/implicit_cast.hpp"
 
 using namespace luabind::detail;
 

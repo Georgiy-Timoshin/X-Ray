@@ -24,7 +24,7 @@
 #ifndef LUABIND_POLICY_HPP_INCLUDED
 #define LUABIND_POLICY_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <typeinfo>
 
@@ -41,19 +41,19 @@
 #include <boost/bind/arg.hpp>
 #include <boost/limits.hpp>
 
-#include <luabind/detail/class_registry.hpp>
-#include <luabind/detail/primitives.hpp>
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/typetraits.hpp>
-#include <luabind/detail/class_cache.hpp>
-#include <luabind/detail/debug.hpp>
+#include "class_registry.hpp"
+#include "primitives.hpp"
+#include "object_rep.hpp"
+#include "typetraits.hpp"
+#include "class_cache.hpp"
+#include "debug.hpp"
 
 #include <boost/type_traits/add_reference.hpp>
 
-#include <luabind/detail/decorate_type.hpp>
-#include <luabind/object.hpp>
-#include <luabind/weak_ref.hpp>
-#include <luabind/back_reference_fwd.hpp>
+#include "decorate_type.hpp"
+#include "../luabind/object.hpp"
+#include "../luabind/weak_ref.hpp"
+#include "../luabind/back_reference_fwd.hpp"
 
 namespace luabind
 {
@@ -1571,7 +1571,7 @@ namespace luabind {	 namespace
 	LUABIND_ANONYMOUS_FIX boost::arg<0> result;
 }}
 
-#include <luabind/detail/object_funs.hpp>
+#include "object_funs.hpp"
 
 #endif // LUABIND_POLICY_HPP_INCLUDED
 

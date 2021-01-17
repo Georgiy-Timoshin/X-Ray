@@ -23,7 +23,7 @@
 #ifndef LUABIND_OVERLOAD_REP_BASE_HPP_INCLUDED
 #define LUABIND_OVERLOAD_REP_BASE_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 #include <boost/function/function1.hpp>
 
 namespace luabind { namespace detail

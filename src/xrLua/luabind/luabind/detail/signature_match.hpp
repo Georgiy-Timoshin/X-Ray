@@ -26,7 +26,7 @@
 #ifndef LUABIND_SIGNATURE_MATCH_HPP_INCLUDED
 #define LUABIND_SIGNATURE_MATCH_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <boost/config.hpp>
 #include <boost/preprocessor/repeat.hpp>
@@ -44,10 +44,10 @@
 #include <boost/mpl/int.hpp>
 #include <boost/type_traits.hpp>
 
-#include <luabind/detail/primitives.hpp>
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/class_rep.hpp>
-#include <luabind/detail/policy.hpp>
+#include "primitives.hpp"
+#include "object_rep.hpp"
+#include "class_rep.hpp"
+#include "policy.hpp"
 
 namespace luabind
 {
@@ -105,7 +105,7 @@ namespace luabind { namespace detail
 
 	template<int N> struct match_constructor;
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/signature_match.hpp>, 2))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "signature_match.hpp", 2))
 	#include BOOST_PP_ITERATE()
 
 #undef LUABIND_MATCH_DECL
@@ -141,7 +141,7 @@ namespace luabind { namespace detail
 			return match_params(L, StartIndex, (Sig*)0, (Policies*)0);
 		}};
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/signature_match.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "signature_match.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 }}

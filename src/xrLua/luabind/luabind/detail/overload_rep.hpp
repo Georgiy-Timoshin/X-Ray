@@ -26,16 +26,16 @@
 #ifndef LUABIND_OVERLOAD_REP_HPP_INCLUDED
 #define LUABIND_OVERLOAD_REP_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <boost/preprocessor/enum_params.hpp>
 #include <boost/preprocessor/iteration/iterate.hpp>
 #include <boost/preprocessor/repeat.hpp>
 
-#include <luabind/detail/overload_rep_base.hpp>
+#include "overload_rep_base.hpp"
 
-#include <luabind/detail/class_rep.hpp>
-#include <luabind/detail/is_indirect_const.hpp>
+#include "class_rep.hpp"
+#include "is_indirect_const.hpp"
 
 namespace luabind { namespace detail
 {
@@ -45,7 +45,7 @@ namespace luabind { namespace detail
 	struct LUABIND_API overload_rep : public overload_rep_base
 	{
 		#define BOOST_PP_ITERATION_PARAMS_1 (4 \
-			, (0, LUABIND_MAX_ARITY, <luabind/detail/overload_rep.hpp>, 1))
+			, (0, LUABIND_MAX_ARITY, "overload_rep.hpp", 1))
 		#include BOOST_PP_ITERATE()
 
 		bool operator==(const overload_rep& o)

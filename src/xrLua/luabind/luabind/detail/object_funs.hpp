@@ -25,12 +25,12 @@
 
 #include <boost/optional.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/error.hpp>
-#include <luabind/detail/convert_to_lua.hpp>
-#include <luabind/detail/debug.hpp>
-#include <luabind/detail/stack_utils.hpp>
+#include "../luabind/config.hpp"
+#include "policy.hpp"
+#include "../luabind/error.hpp"
+#include "convert_to_lua.hpp"
+#include "debug.hpp"
+#include "stack_utils.hpp"
 
 namespace luabind
 {

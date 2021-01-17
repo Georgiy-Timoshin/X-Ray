@@ -26,8 +26,8 @@
 #include <boost/mpl/apply_if.hpp>
 #include <boost/mpl/identity.hpp>
 #include <boost/type_traits/is_same.hpp>
-#include <luabind/detail/other.hpp>
-#include <luabind/raw_policy.hpp>
+#include "detail/other.hpp"
+#include "raw_policy.hpp"
 
 namespace luabind { namespace detail {
 
@@ -47,7 +47,7 @@ namespace luabind { namespace detail {
 namespace luabind { namespace operators {
 
    #define BOOST_PP_ITERATION_PARAMS_1 (3, \
-       (0, LUABIND_MAX_ARITY, <luabind/detail/call_operator_iterate.hpp>))
+       (0, LUABIND_MAX_ARITY, "detail/call_operator_iterate.hpp"))
    #include BOOST_PP_ITERATE()
     
 }} // namespace luabind::operators

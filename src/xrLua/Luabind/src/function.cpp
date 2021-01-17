@@ -21,10 +21,10 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/config.hpp>
-#include <luabind/luabind.hpp>
+#include "../luabind/config.hpp"
+#include "../luabind/luabind.hpp"
 
 namespace luabind { namespace detail { namespace free_functions {
 

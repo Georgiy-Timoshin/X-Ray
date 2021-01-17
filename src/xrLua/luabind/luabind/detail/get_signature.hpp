@@ -35,8 +35,8 @@
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/detail/signature_match.hpp>
+#include "../luabind/config.hpp"
+#include "signature_match.hpp"
 
 
 namespace luabind { namespace detail
@@ -102,7 +102,7 @@ namespace luabind { namespace detail
 
 #define LUABIND_ADD_LUA_TYPE_NAME(z, n, _) type_name_unless_void<BOOST_PP_CAT(A, BOOST_PP_INC(n))>::apply(s, L, false);
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/get_signature.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "get_signature.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 	template<class F>

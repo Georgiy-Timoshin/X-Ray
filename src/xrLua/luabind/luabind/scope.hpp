@@ -23,9 +23,9 @@
 #ifndef NEW_SCOPE_040211_HPP
 #define NEW_SCOPE_040211_HPP
 
-#include <luabind/prefix.hpp>
-#include <luabind/config.hpp>
-#include <luabind/lua_include.hpp>
+#include "prefix.hpp"
+#include "config.hpp"
+#include "lua_include.hpp"
 #include <memory>
 
 namespace luabind { 

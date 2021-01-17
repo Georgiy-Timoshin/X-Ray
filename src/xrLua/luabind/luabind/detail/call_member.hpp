@@ -26,10 +26,10 @@
 #ifndef LUABIND_CALL_MEMBER_HPP_INCLUDED
 #define LUABIND_CALL_MEMBER_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/detail/convert_to_lua.hpp>
-#include <luabind/detail/pcall.hpp>
-#include <luabind/error.hpp>
+#include "../luabind/config.hpp"
+#include "convert_to_lua.hpp"
+#include "pcall.hpp"
+#include "../luabind/error.hpp"
 
 #include <boost/preprocessor/control/if.hpp>
 #include <boost/preprocessor/facilities/expand.hpp>
@@ -303,7 +303,7 @@ namespace luabind
 
 	} // detail
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/call_member.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "call_member.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 }

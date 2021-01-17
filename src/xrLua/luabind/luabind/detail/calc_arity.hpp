@@ -32,7 +32,7 @@ namespace luabind { namespace detail
 {
 	template<int N> struct calc_arity;
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/calc_arity.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "calc_arity.hpp", 1))
 	#include BOOST_PP_ITERATE()
 }}
 

@@ -26,7 +26,7 @@
 #ifndef LUABIND_OPERATORS_HPP_INCLUDED
 #define LUABIND_OPERATORS_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 #include <boost/config.hpp>
 
 #if defined(__GNUC__) && __GNUC__ < 3
@@ -48,10 +48,10 @@
 #include <boost/mpl/if.hpp>
 #include <boost/mpl/vector.hpp>
 
-#include <luabind/detail/other.hpp>
-#include <luabind/detail/operator_id.hpp>
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/policy.hpp>
+#include "other.hpp"
+#include "operator_id.hpp"
+#include "signature_match.hpp"
+#include "policy.hpp"
 
 namespace luabind { namespace detail {
 
@@ -77,7 +77,7 @@ namespace luabind { namespace detail {
 //#endif
 
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/operators.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "operators.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 	#define LUABIND_UNWRAP_PARAM(z,n,_) LUABIND_MSVC6_NO_TYPENAME unwrap_other<A##n>::type
@@ -127,7 +127,7 @@ namespace luabind { namespace detail {
 	
 	struct self_t
 	{
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/operators.hpp>, 2))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "operators.hpp", 2))
 		#include BOOST_PP_ITERATE()
 
 		operator_<op_tostring_tag, self_t, null_type> tostring;
@@ -141,7 +141,7 @@ namespace luabind { namespace detail {
 
 	struct const_self_t
 	{
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/operators.hpp>, 3))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "operators.hpp", 3))
 		#include BOOST_PP_ITERATE()
 
 		operator_<op_tostring_tag, const_self_t, null_type> tostring;

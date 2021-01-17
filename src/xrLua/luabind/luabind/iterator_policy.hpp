@@ -24,10 +24,10 @@
 #ifndef LUABIND_ITERATOR_POLICY_HPP_INCLUDED
 #define LUABIND_ITERATOR_POLICY_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/detail/implicit_cast.hpp>
-#include <luabind/detail/convert_to_lua.hpp>
+#include "config.hpp"
+#include "detail/policy.hpp"
+#include "detail/implicit_cast.hpp"
+#include "detail/convert_to_lua.hpp"
 
 namespace luabind { namespace detail 
 {

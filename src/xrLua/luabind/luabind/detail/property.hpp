@@ -24,7 +24,7 @@
 #ifndef LUABIND_PROPERTY_HPP_INCLUDED
 #define LUABIND_PROPERTY_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 namespace luabind { namespace detail
 {

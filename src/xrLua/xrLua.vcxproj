@@ -64,7 +64,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;DEBUG;_WINDOWS;_USRDLL;LUA_BUILD_AS_DLL;LUABIND_BUILDING;DEBUG;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -102,7 +102,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LUA_BUILD_AS_DLL;LUABIND_BUILDING;LUABIND_NO_ERROR_CHECKING;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <StringPooling>true</StringPooling>
@@ -147,7 +147,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;LUA_BUILD_AS_DLL;LUABIND_BUILDING;DEBUG;MIXED;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -180,133 +180,133 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\lapi.c" />
-    <ClCompile Include="src\lauxlib.c" />
-    <ClCompile Include="src\lbaselib.c" />
-    <ClCompile Include="src\lcoco.c" />
-    <ClCompile Include="src\lcocolib.c" />
-    <ClCompile Include="src\lcode.c" />
-    <ClCompile Include="src\ldblib.c" />
-    <ClCompile Include="src\ldebug.c" />
-    <ClCompile Include="src\ldo.c" />
-    <ClCompile Include="src\ldump.c" />
-    <ClCompile Include="src\lfunc.c" />
-    <ClCompile Include="src\lgc.c" />
-    <ClCompile Include="src\linit.c" />
-    <ClCompile Include="src\liolib.c" />
-    <ClCompile Include="src\ljit_backend.c" />
-    <ClCompile Include="src\ljit_core.c" />
-    <ClCompile Include="src\ljit_dasm.c" />
-    <ClCompile Include="src\ljit_mem.c" />
-    <ClCompile Include="src\ljitlib.c" />
-    <ClCompile Include="src\llex.c" />
-    <ClCompile Include="src\lmathlib.c" />
-    <ClCompile Include="src\lmem.c" />
-    <ClCompile Include="src\loadlib.c" />
-    <ClCompile Include="src\lobject.c" />
-    <ClCompile Include="src\lopcodes.c" />
-    <ClCompile Include="src\loslib.c" />
-    <ClCompile Include="src\lparser.c" />
-    <ClCompile Include="src\lstate.c" />
-    <ClCompile Include="src\lstring.c" />
-    <ClCompile Include="src\lstrlib.c" />
-    <ClCompile Include="src\ltable.c" />
-    <ClCompile Include="src\ltablib.c" />
-    <ClCompile Include="src\ltm.c" />
-    <ClCompile Include="src\lundump.c" />
-    <ClCompile Include="src\lvm.c" />
-    <ClCompile Include="src\lzio.c" />
-    <ClCompile Include="luabind\class.cpp">
+    <ClCompile Include="LuaJIT\src\lapi.c" />
+    <ClCompile Include="LuaJIT\src\lauxlib.c" />
+    <ClCompile Include="LuaJIT\src\lbaselib.c" />
+    <ClCompile Include="LuaJIT\src\lcoco.c" />
+    <ClCompile Include="LuaJIT\src\lcocolib.c" />
+    <ClCompile Include="LuaJIT\src\lcode.c" />
+    <ClCompile Include="LuaJIT\src\ldblib.c" />
+    <ClCompile Include="LuaJIT\src\ldebug.c" />
+    <ClCompile Include="LuaJIT\src\ldo.c" />
+    <ClCompile Include="LuaJIT\src\ldump.c" />
+    <ClCompile Include="LuaJIT\src\lfunc.c" />
+    <ClCompile Include="LuaJIT\src\lgc.c" />
+    <ClCompile Include="LuaJIT\src\linit.c" />
+    <ClCompile Include="LuaJIT\src\liolib.c" />
+    <ClCompile Include="LuaJIT\src\ljit_backend.c" />
+    <ClCompile Include="LuaJIT\src\ljit_core.c" />
+    <ClCompile Include="LuaJIT\src\ljit_dasm.c" />
+    <ClCompile Include="LuaJIT\src\ljit_mem.c" />
+    <ClCompile Include="LuaJIT\src\ljitlib.c" />
+    <ClCompile Include="LuaJIT\src\llex.c" />
+    <ClCompile Include="LuaJIT\src\lmathlib.c" />
+    <ClCompile Include="LuaJIT\src\lmem.c" />
+    <ClCompile Include="LuaJIT\src\loadlib.c" />
+    <ClCompile Include="LuaJIT\src\lobject.c" />
+    <ClCompile Include="LuaJIT\src\lopcodes.c" />
+    <ClCompile Include="LuaJIT\src\loslib.c" />
+    <ClCompile Include="LuaJIT\src\lparser.c" />
+    <ClCompile Include="LuaJIT\src\lstate.c" />
+    <ClCompile Include="LuaJIT\src\lstring.c" />
+    <ClCompile Include="LuaJIT\src\lstrlib.c" />
+    <ClCompile Include="LuaJIT\src\ltable.c" />
+    <ClCompile Include="LuaJIT\src\ltablib.c" />
+    <ClCompile Include="LuaJIT\src\ltm.c" />
+    <ClCompile Include="LuaJIT\src\lundump.c" />
+    <ClCompile Include="LuaJIT\src\lvm.c" />
+    <ClCompile Include="LuaJIT\src\lzio.c" />
+    <ClCompile Include="Luabind\src\class.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\class_info.cpp">
+    <ClCompile Include="Luabind\src\class_info.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\class_registry.cpp">
+    <ClCompile Include="Luabind\src\class_registry.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\class_rep.cpp">
+    <ClCompile Include="Luabind\src\class_rep.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\create_class.cpp">
+    <ClCompile Include="Luabind\src\create_class.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\error.cpp">
+    <ClCompile Include="Luabind\src\error.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\find_best_match.cpp">
+    <ClCompile Include="Luabind\src\find_best_match.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\function.cpp">
+    <ClCompile Include="Luabind\src\function.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\implicit_cast.cpp">
+    <ClCompile Include="Luabind\src\implicit_cast.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\link_compatibility.cpp">
+    <ClCompile Include="Luabind\src\link_compatibility.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\object.cpp">
+    <ClCompile Include="Luabind\src\object.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\object_rep.cpp">
+    <ClCompile Include="Luabind\src\object_rep.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\open.cpp">
+    <ClCompile Include="Luabind\src\open.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\pcall.cpp">
+    <ClCompile Include="Luabind\src\pcall.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\ref.cpp">
+    <ClCompile Include="Luabind\src\ref.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\scope.cpp">
+    <ClCompile Include="Luabind\src\scope.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\stack_content_by_name.cpp">
+    <ClCompile Include="Luabind\src\stack_content_by_name.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\weak_ref.cpp">
+    <ClCompile Include="Luabind\src\weak_ref.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="luabind\wrapper_base.cpp">
+    <ClCompile Include="Luabind\src\wrapper_base.cpp">
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">TurnOffAllWarnings</WarningLevel>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
@@ -314,47 +314,47 @@
     <ClCompile Include="StdAfx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\lapi.h" />
-    <ClInclude Include="src\lauxlib.h" />
-    <ClInclude Include="src\lcoco.h" />
-    <ClInclude Include="src\lcode.h" />
-    <ClInclude Include="src\ldebug.h" />
-    <ClInclude Include="src\ldo.h" />
-    <ClInclude Include="src\lfunc.h" />
-    <ClInclude Include="src\lgc.h" />
-    <ClInclude Include="src\ljit.h" />
-    <ClInclude Include="src\ljit_dasm.h" />
-    <ClInclude Include="src\ljit_hints.h" />
-    <ClInclude Include="src\ljit_x86.h" />
-    <ClInclude Include="src\llex.h" />
-    <ClInclude Include="src\llimits.h" />
-    <ClInclude Include="src\lmem.h" />
-    <ClInclude Include="src\lobject.h" />
-    <ClInclude Include="src\lopcodes.h" />
-    <ClInclude Include="src\lparser.h" />
-    <ClInclude Include="src\lstate.h" />
-    <ClInclude Include="src\lstring.h" />
-    <ClInclude Include="src\ltable.h" />
-    <ClInclude Include="src\ltm.h" />
-    <ClInclude Include="src\lua.h" />
-    <ClInclude Include="src\luaconf.h" />
-    <ClInclude Include="src\luajit.h" />
-    <ClInclude Include="src\lualib.h" />
-    <ClInclude Include="src\lundump.h" />
-    <ClInclude Include="src\lvm.h" />
-    <ClInclude Include="src\lzio.h" />
-    <ClInclude Include="dynasm\dasm_proto.h" />
-    <ClInclude Include="dynasm\dasm_x86.h" />
+    <ClInclude Include="LuaJIT\src\lapi.h" />
+    <ClInclude Include="LuaJIT\src\lauxlib.h" />
+    <ClInclude Include="LuaJIT\src\lcoco.h" />
+    <ClInclude Include="LuaJIT\src\lcode.h" />
+    <ClInclude Include="LuaJIT\src\ldebug.h" />
+    <ClInclude Include="LuaJIT\src\ldo.h" />
+    <ClInclude Include="LuaJIT\src\lfunc.h" />
+    <ClInclude Include="LuaJIT\src\lgc.h" />
+    <ClInclude Include="LuaJIT\src\ljit.h" />
+    <ClInclude Include="LuaJIT\src\ljit_dasm.h" />
+    <ClInclude Include="LuaJIT\src\ljit_hints.h" />
+    <ClInclude Include="LuaJIT\src\ljit_x86.h" />
+    <ClInclude Include="LuaJIT\src\llex.h" />
+    <ClInclude Include="LuaJIT\src\llimits.h" />
+    <ClInclude Include="LuaJIT\src\lmem.h" />
+    <ClInclude Include="LuaJIT\src\lobject.h" />
+    <ClInclude Include="LuaJIT\src\lopcodes.h" />
+    <ClInclude Include="LuaJIT\src\lparser.h" />
+    <ClInclude Include="LuaJIT\src\lstate.h" />
+    <ClInclude Include="LuaJIT\src\lstring.h" />
+    <ClInclude Include="LuaJIT\src\ltable.h" />
+    <ClInclude Include="LuaJIT\src\ltm.h" />
+    <ClInclude Include="LuaJIT\src\lua.h" />
+    <ClInclude Include="LuaJIT\src\luaconf.h" />
+    <ClInclude Include="LuaJIT\src\luajit.h" />
+    <ClInclude Include="LuaJIT\src\lualib.h" />
+    <ClInclude Include="LuaJIT\src\lundump.h" />
+    <ClInclude Include="LuaJIT\src\lvm.h" />
+    <ClInclude Include="LuaJIT\src\lzio.h" />
+    <ClInclude Include="LuaJIT\dynasm\dasm_proto.h" />
+    <ClInclude Include="LuaJIT\dynasm\dasm_x86.h" />
     <ClInclude Include="StdAfx.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dynasm\dasm_x86.lua" />
-    <None Include="jitlib\dump.lua" />
-    <None Include="jitlib\dumphints.lua" />
-    <None Include="dynasm\dynasm.lua" />
-    <None Include="jitlib\opt.lua" />
-    <None Include="jitlib\opt_lib.lua" />
-    <None Include="jitlib\trace.lua" />
+    <None Include="LuaJIT\dynasm\dasm_x86.lua" />
+    <None Include="LuaJIT\jitlib\dump.lua" />
+    <None Include="LuaJIT\jitlib\dumphints.lua" />
+    <None Include="LuaJIT\dynasm\dynasm.lua" />
+    <None Include="LuaJIT\jitlib\opt.lua" />
+    <None Include="LuaJIT\jitlib\opt_lib.lua" />
+    <None Include="LuaJIT\jitlib\trace.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

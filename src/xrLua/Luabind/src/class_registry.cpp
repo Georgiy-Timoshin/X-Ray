@@ -21,12 +21,12 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/luabind.hpp>
-#include <luabind/detail/class_registry.hpp>
-#include <luabind/detail/class_rep.hpp>
-#include <luabind/detail/operator_id.hpp>
+#include "../luabind/luabind.hpp"
+#include "../luabind/detail/class_registry.hpp"
+#include "../luabind/detail/class_rep.hpp"
+#include "../luabind/detail/operator_id.hpp"
 
 namespace luabind { namespace detail {
 

@@ -24,7 +24,7 @@
 #ifndef LUABIND_FIND_BEST_MATCH_HPP_INCLUDED
 #define LUABIND_FIND_BEST_MATCH_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <boost/limits.hpp>
 

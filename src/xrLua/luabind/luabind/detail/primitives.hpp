@@ -26,8 +26,8 @@
 
 #include <algorithm>
 
-#include <luabind/config.hpp>
-#include <luabind/detail/yes_no.hpp>
+#include "../luabind/config.hpp"
+#include "yes_no.hpp"
 
 namespace luabind { namespace detail
 {

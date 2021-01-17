@@ -21,8 +21,8 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/class_rep.hpp>
+#include "../luabind/detail/object_rep.hpp"
+#include "../luabind/detail/class_rep.hpp"
 
 //#define TEST_GARBAGE_COLLECTOR
 

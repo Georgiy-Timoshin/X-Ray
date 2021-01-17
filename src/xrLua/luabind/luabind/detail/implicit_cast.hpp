@@ -24,8 +24,8 @@
 #ifndef LUABIND_IMPLICIT_CAST_HPP_INCLUDED
 #define LUABIND_IMPLICIT_CAST_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/detail/class_rep.hpp>
+#include "../luabind/config.hpp"
+#include "class_rep.hpp"
 
 namespace luabind { namespace detail
 {

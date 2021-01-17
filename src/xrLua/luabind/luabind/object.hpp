@@ -27,11 +27,11 @@
 
 #include <iterator>
 
-#include <luabind/prefix.hpp>
-#include <luabind/config.hpp>
-#include <luabind/error.hpp>
-#include <luabind/detail/pcall.hpp>
-#include <luabind/detail/stack_utils.hpp>
+#include "prefix.hpp"
+#include "config.hpp"
+#include "error.hpp"
+#include "detail/pcall.hpp"
+#include "detail/stack_utils.hpp"
 
 #include <boost/preprocessor/repeat.hpp>
 #include <boost/preprocessor/iteration/iterate.hpp>
@@ -1027,7 +1027,7 @@ namespace luabind
 		// *****************************
 		// OPERATOR()
 
-		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/object.hpp>, 1))
+		#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "object.hpp", 1))
 		#include BOOST_PP_ITERATE()
 
 

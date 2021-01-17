@@ -26,7 +26,7 @@
 #ifndef LUABIND_CALL_FUNCTION_HPP_INCLUDED
 #define LUABIND_CALL_FUNCTION_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <boost/mpl/if.hpp>
 #include <boost/tuple/tuple.hpp>
@@ -38,9 +38,9 @@
 #include <boost/preprocessor/repetition/enum_binary_params.hpp>
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 
-#include <luabind/error.hpp>
-#include <luabind/detail/convert_to_lua.hpp>
-#include <luabind/detail/pcall.hpp>
+#include "../luabind/error.hpp"
+#include "convert_to_lua.hpp"
+#include "pcall.hpp"
 
 namespace luabind
 {
@@ -316,7 +316,7 @@ namespace luabind
 
 	}
 
-	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/detail/call_function.hpp>, 1))
+	#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "call_function.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 }

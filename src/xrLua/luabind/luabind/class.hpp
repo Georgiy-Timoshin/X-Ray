@@ -67,8 +67,8 @@
 	
 */
 
-#include <luabind/prefix.hpp>
-#include <luabind/config.hpp>
+#include "prefix.hpp"
+#include "config.hpp"
 
 #include <string>
 #include <map>
@@ -91,27 +91,27 @@
 #include <boost/mpl/apply_if.hpp>
 #include <boost/mpl/logical.hpp>
 
-#include <luabind/config.hpp>
-#include <luabind/scope.hpp>
-#include <luabind/back_reference.hpp>
-#include <luabind/detail/constructor.hpp>
-#include <luabind/detail/call.hpp>
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/primitives.hpp>
-#include <luabind/detail/property.hpp>
-#include <luabind/detail/typetraits.hpp>
-#include <luabind/detail/class_rep.hpp>
-#include <luabind/detail/method_rep.hpp>
-#include <luabind/detail/construct_rep.hpp>
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/calc_arity.hpp>
-#include <luabind/detail/call_member.hpp>
-#include <luabind/detail/enum_maker.hpp>
-#include <luabind/detail/get_signature.hpp>
-#include <luabind/detail/implicit_cast.hpp>
-#include <luabind/detail/operator_id.hpp>
-#include <luabind/detail/pointee_typeid.hpp>
-#include <luabind/detail/link_compatibility.hpp>
+#include "config.hpp"
+#include "scope.hpp"
+#include "back_reference.hpp"
+#include "detail/constructor.hpp"
+#include "detail/call.hpp"
+#include "detail/signature_match.hpp"
+#include "detail/primitives.hpp"
+#include "detail/property.hpp"
+#include "detail/typetraits.hpp"
+#include "detail/class_rep.hpp"
+#include "detail/method_rep.hpp"
+#include "detail/construct_rep.hpp"
+#include "detail/object_rep.hpp"
+#include "detail/calc_arity.hpp"
+#include "detail/call_member.hpp"
+#include "detail/enum_maker.hpp"
+#include "detail/get_signature.hpp"
+#include "detail/implicit_cast.hpp"
+#include "detail/operator_id.hpp"
+#include "detail/pointee_typeid.hpp"
+#include "detail/link_compatibility.hpp"
 
 // to remove the 'this' used in initialization list-warning
 #ifdef _MSC_VER

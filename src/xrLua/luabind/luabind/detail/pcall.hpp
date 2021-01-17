@@ -23,7 +23,7 @@
 #ifndef LUABIND_PCALL_HPP_INCLUDED
 #define LUABIND_PCALL_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 struct lua_State;
 

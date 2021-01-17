@@ -26,8 +26,8 @@
 #ifndef LUABIND_FUNCTION_HPP_INCLUDED
 #define LUABIND_FUNCTION_HPP_INCLUDED
 
-#include <luabind/prefix.hpp>
-#include <luabind/config.hpp>
+#include "prefix.hpp"
+#include "config.hpp"
 
 #include <boost/config.hpp>
 #include <boost/preprocessor/repeat.hpp>
@@ -36,12 +36,12 @@
 #include <boost/preprocessor/repetition/enum_params.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/call_function.hpp>
-#include <luabind/detail/get_overload_signature.hpp>
-#include <luabind/detail/overload_rep_base.hpp>
+#include "detail/signature_match.hpp"
+#include "detail/call_function.hpp"
+#include "detail/get_overload_signature.hpp"
+#include "detail/overload_rep_base.hpp"
 
-#include <luabind/scope.hpp>
+#include "scope.hpp"
 
 namespace luabind
 {
@@ -54,7 +54,7 @@ namespace luabind
 			struct overload_rep: public overload_rep_base
 			{
 
-#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/function.hpp>, 1))
+#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "function.hpp", 1))
 #include BOOST_PP_ITERATE()
 
 				inline bool operator==(const overload_rep& o) const
@@ -137,18 +137,18 @@ namespace luabind
 			template<class T>
 			struct returns
 			{
-				#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/function.hpp>, 2))
+				#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "function.hpp", 2))
 				#include BOOST_PP_ITERATE()
 			};
 
 			template<>
 			struct returns<void>
 			{
-				#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/function.hpp>, 3))
+				#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "function.hpp", 3))
 				#include BOOST_PP_ITERATE()
 			};
 
-			#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/function.hpp>, 4))
+			#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "function.hpp", 4))
 			#include BOOST_PP_ITERATE()
 
 
@@ -159,7 +159,7 @@ namespace luabind
 #undef LUABIND_INDEX_MAP
 
 
-			#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/function.hpp>, 5))
+			#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "function.hpp", 5))
 			#include BOOST_PP_ITERATE()
 
 

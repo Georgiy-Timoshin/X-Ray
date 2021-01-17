@@ -22,10 +22,10 @@
 
 #define LUA_LIB
 #include <algorithm>
-#include <luabind/config.hpp>
-#include <luabind/detail/ref.hpp>
-#include <luabind/lua_include.hpp>
-#include <luabind/detail/debug.hpp>
+#include "../luabind/config.hpp"
+#include "../luabind/detail/ref.hpp"
+#include "../luabind/lua_include.hpp"
+#include "../luabind/detail/debug.hpp"
 
 namespace luabind { namespace detail
 {

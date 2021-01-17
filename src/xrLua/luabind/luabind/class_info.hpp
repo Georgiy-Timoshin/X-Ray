@@ -24,9 +24,9 @@
 #ifndef LUABIND_CLASS_INFO_HPP_INCLUDED
 #define LUABIND_CLASS_INFO_HPP_INCLUDED
 
-#include <luabind/prefix.hpp>
-#include <luabind/lua_include.hpp>
-#include <luabind/luabind.hpp>
+#include "prefix.hpp"
+#include "lua_include.hpp"
+#include "luabind.hpp"
 
 namespace luabind
 {

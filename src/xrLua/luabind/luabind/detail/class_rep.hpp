@@ -30,20 +30,20 @@
 #include <utility>
 #include <list>
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
-#include <luabind/detail/object_rep.hpp>
-#include <luabind/detail/construct_rep.hpp>
-#include <luabind/detail/garbage_collector.hpp>
-#include <luabind/detail/operator_id.hpp>
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/class_registry.hpp>
-#include <luabind/detail/find_best_match.hpp>
-#include <luabind/detail/get_overload_signature.hpp>
-#include <luabind/error.hpp>
-#include <luabind/detail/method_rep.hpp>
+#include "object_rep.hpp"
+#include "construct_rep.hpp"
+#include "garbage_collector.hpp"
+#include "operator_id.hpp"
+#include "signature_match.hpp"
+#include "class_registry.hpp"
+#include "find_best_match.hpp"
+#include "get_overload_signature.hpp"
+#include "../luabind/error.hpp"
+#include "method_rep.hpp"
 
-#include <luabind/detail/lua_strings.h>
+#include "lua_strings.h"
 
 #ifdef USE_NATIVE_LUA_STRINGS
 #	include <hash_map>
@@ -420,6 +420,6 @@ private:
 
 }}
 
-#include <luabind/detail/overload_rep_impl.hpp>
+#include "overload_rep_impl.hpp"
 
 #endif // LUABIND_CLASS_REP_HPP_INCLUDED

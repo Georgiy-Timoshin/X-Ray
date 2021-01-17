@@ -24,11 +24,11 @@
 #ifndef LUABIND_COPY_POLICY_HPP_INCLUDED
 #define LUABIND_COPY_POLICY_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "config.hpp"
 
 #include <boost/type_traits/is_pointer.hpp>
 #include <boost/type_traits/is_reference.hpp>
-#include <luabind/detail/policy.hpp>
+#include "detail/policy.hpp"
 
 namespace luabind { namespace detail {
 

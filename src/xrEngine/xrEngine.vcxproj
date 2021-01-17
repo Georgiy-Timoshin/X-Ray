@@ -134,7 +134,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;WIN32;_WINDOWS;ENGINE_BUILD;SECURE_GAMEDATA;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -196,7 +196,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;MIXED;WIN32;_WINDOWS;ENGINE_BUILD;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -254,7 +254,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;ENGINE_BUILD;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -319,7 +319,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEDICATED_SERVER;_DEBUG;DEBUG;WIN32;_WINDOWS;ENGINE_BUILD;SECURE_GAMEDATA;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -379,7 +379,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEDICATED_SERVER;DEBUG;MIXED;WIN32;_WINDOWS;ENGINE_BUILD;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -437,7 +437,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\luabind\;$(SolutionDir)src\xrLua\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Externals\boost_1_30_0\;$(SolutionDir)src\Externals\DXSDK_Aug2007\Include\;$(SolutionDir)src\Externals\DXSDK_Jun2010\Include\;$(SolutionDir)src\Externals\Xiph\Include\;$(SolutionDir)src\xrCore\;$(SolutionDir)src\xrLua\Luabind\;$(SolutionDir)src\xrLua\LuaJIT\src\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEDICATED_SERVER;NDEBUG;WIN32;_WINDOWS;ENGINE_BUILD;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>

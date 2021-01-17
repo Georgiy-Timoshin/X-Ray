@@ -24,7 +24,7 @@
 #ifndef LUABIND_CONSTRUCT_REP_HPP_INCLUDED
 #define LUABIND_CONSTRUCT_REP_HPP_INCLUDED
 
-#include <luabind/config.hpp>
+#include "../luabind/config.hpp"
 
 #include <vector>
 #include <string>
@@ -33,9 +33,9 @@
 #include <boost/function/function1.hpp>
 #include <boost/function/function2.hpp>
 
-#include <luabind/detail/signature_match.hpp>
-#include <luabind/detail/overload_rep_base.hpp>
-#include <luabind/weak_ref.hpp>
+#include "signature_match.hpp"
+#include "overload_rep_base.hpp"
+#include "../luabind/weak_ref.hpp"
 
 namespace luabind { namespace detail
 {

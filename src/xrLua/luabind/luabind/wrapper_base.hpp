@@ -25,10 +25,10 @@
 #ifndef LUABIND_WRAPPER_BASE_HPP_INCLUDED
 #define LUABIND_WRAPPER_BASE_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/weak_ref.hpp>
-#include <luabind/detail/ref.hpp>
-#include <luabind/detail/call_member.hpp>
+#include "config.hpp"
+#include "weak_ref.hpp"
+#include "detail/ref.hpp"
+#include "detail/call_member.hpp"
 
 #include <boost/preprocessor/repetition/enum_trailing_params.hpp>
 #include <boost/preprocessor/repetition/enum_trailing_binary_params.hpp>
@@ -58,14 +58,14 @@ namespace luabind
 		friend struct detail::wrap_access;
 		wrap_base() {}
 
-    #define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/wrapper_base.hpp>, 1))
+    #define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "wrapper_base.hpp", 1))
 	#include BOOST_PP_ITERATE()
 
 	private:
 		wrapped_self_t m_self;
 	};
 
-#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, <luabind/wrapper_base.hpp>, 2))
+#define BOOST_PP_ITERATION_PARAMS_1 (4, (0, LUABIND_MAX_ARITY, "wrapper_base.hpp", 2))
 #include BOOST_PP_ITERATE()
 
 	namespace detail

@@ -23,7 +23,7 @@
 #ifndef LUABIND_OVERLOAD_REP_IMPL_HPP_INCLUDED
 #define LUABIND_OVERLOAD_REP_IMPL_HPP_INCLUDED
 
-#include <luabind/detail/overload_rep.hpp>
+#include "overload_rep.hpp"
 
 namespace luabind { namespace detail
 {

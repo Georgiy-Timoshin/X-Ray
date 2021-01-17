@@ -23,9 +23,9 @@
 #ifndef LUABIND_COM_POLICY_HPP_INCLUDED
 #define LUABIND_COM_POLICY_HPP_INCLUDED
 
-#include <luabind/config.hpp>
-#include <luabind/detail/policy.hpp>
-#include <luabind/detail/implicit_cast.hpp>
+#include "config.hpp"
+#include "detail/policy.hpp"
+#include "detail/implicit_cast.hpp"
 
 namespace luabind { namespace detail 
 {

@@ -23,9 +23,9 @@
 #ifndef LUABIND_ERROR_HPP_INCLUDED
 #define LUABIND_ERROR_HPP_INCLUDED
 
-#include <luabind/prefix.hpp>
+#include "prefix.hpp"
 #include <exception>
-#include <luabind/config.hpp>
+#include "config.hpp"
 
 struct lua_State;
 

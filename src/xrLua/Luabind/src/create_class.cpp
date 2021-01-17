@@ -21,9 +21,9 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define LUA_LIB
-#include <luabind/lua_include.hpp>
+#include "../luabind/lua_include.hpp"
 
-#include <luabind/luabind.hpp>
+#include "../luabind/luabind.hpp"
 
 namespace luabind { namespace detail
 {
