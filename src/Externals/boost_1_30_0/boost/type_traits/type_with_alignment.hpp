@@ -106,7 +106,7 @@ class type_with_alignment
     BOOST_STATIC_CONSTANT(std::size_t, found = alignment_of<align_t>::value);
 
 #ifndef __BORLANDC__
-    BOOST_STATIC_ASSERT(found >= Align);
+    BOOST_STATIC_ASSERT((int)found >= Align);
     BOOST_STATIC_ASSERT(found % Align == 0);
 #else
     BOOST_STATIC_ASSERT(::boost::type_with_alignment<Align>::found >= Align);
