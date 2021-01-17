@@ -181,7 +181,7 @@ void CUIItemInfo::InitItem(CInventoryItem* pInvItem)
 	}
 	if(UIItemImage)
 	{
-		// ��������� ��������
+		// Загружаем картинку
 		UIItemImage->SetShader				(InventoryUtilities::GetEquipmentIconsShader());
 
 		int iGridWidth						= pInvItem->GetGridWidth();
@@ -198,8 +198,7 @@ void CUIItemInfo::InitItem(CInventoryItem* pInvItem)
 												0.0f, 
 												float(iGridWidth*INV_GRID_WIDTH),	
 												float(iGridHeight*INV_GRID_HEIGHT)};
-		if(UI()->is_16_9_mode())
-			v_r.x2 /= 1.328f;
+		v_r.x2								*= UI()->get_current_kx(); // Исправление растянутой иконки описания предмета
 
 		UIItemImage->GetUIStaticItem().SetRect	(v_r);
 		UIItemImage->SetWidth					(_min(v_r.width(),	UIItemImageSize.x));
