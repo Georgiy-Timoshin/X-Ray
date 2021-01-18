@@ -384,6 +384,11 @@
     <ClCompile Include="rt_lzo1x_d3.cpp" />
     <ClCompile Include="rt_lzo_init.cpp" />
     <ClCompile Include="xrSyncronize.cpp" />
+    <ClCompile Include="xrXMLParser\tinystr.cpp" />
+    <ClCompile Include="xrXMLParser\tinyxml.cpp" />
+    <ClCompile Include="xrXMLParser\tinyxmlerror.cpp" />
+    <ClCompile Include="xrXMLParser\tinyxmlparser.cpp" />
+    <ClCompile Include="xrXMLParser\xrXMLParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FTimer.h" />
@@ -424,6 +429,9 @@
     <ClInclude Include="clsid.h" />
     <ClInclude Include="fastdelegate.h" />
     <ClInclude Include="xr_trims.h" />
+    <ClInclude Include="xrXMLParser\tinystr.h" />
+    <ClInclude Include="xrXMLParser\tinyxml.h" />
+    <ClInclude Include="xrXMLParser\xrXMLParser.h" />
     <CustomBuildStep Include="FileSystem.h" />
     <ClInclude Include="FS.h" />
     <ClInclude Include="FS_internal.h" />

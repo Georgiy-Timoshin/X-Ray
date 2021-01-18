@@ -101,12 +101,6 @@ if not exist "..\src\xrSound\xrSound.vcxproj.user" (
 	del ..\src\xrSound\xrSound.vcxproj.user
 	echo xrSound.vcxproj.user		- deleted!
 )
-if not exist "..\src\xrXMLParser\xrXMLParser.vcxproj.user" (
-	echo xrXMLParser.vcxproj.user	- missing!
-) else (
-	del ..\src\xrXMLParser\xrXMLParser.vcxproj.user
-	echo xrXMLParser.vcxproj.user	- deleted!
-)
 if not exist "..\src\ipch" (
 	echo Folder "ipch"			- missing!
 ) else (
