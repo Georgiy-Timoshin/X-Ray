@@ -81,6 +81,7 @@ CDetailManager::CDetailManager	()
 	hw_BatchSize= 0;
 	hw_VB		= 0;
 	hw_IB		= 0;
+	ps_current_detail_obj_size = ps_r__Detail_obj_size;
 }
 
 CDetailManager::~CDetailManager	()

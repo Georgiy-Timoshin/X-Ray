@@ -26,6 +26,8 @@ const int		dm_cache_size		= dm_cache_line*dm_cache_line;
 const float		dm_fade				= float(2*dm_size)-.5f;
 const float		dm_slot_size		= DETAIL_SLOT_SIZE;
 
+extern float	ps_current_detail_obj_size;
+
 class CDetailManager
 {
 public:

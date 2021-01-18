@@ -30,6 +30,7 @@ float		ps_r__Detail_l_ambient		= 0.9f	;
 float		ps_r__Detail_l_aniso		= 0.25f	;
 float		ps_r__Detail_density		= 0.3f	;
 float		ps_r__Detail_rainbow_hemi	= 0.75f	;
+float		ps_r__Detail_obj_size		= 1.f	;
 
 float		ps_r__Tree_w_rot			= 10.0f	;
 float		ps_r__Tree_w_speed			= 1.00f	;
@@ -116,7 +117,7 @@ int			ps_r2_wait_sleep			= 0;
 
 float		ps_r2_lt_smooth				= 1.f;				// 1.f
 float		ps_r2_slight_fade			= 1.f;				// 1.f
-
+float		ps_current_detail_obj_size	= 1.f;
 
 //- Mad Max
 float		ps_r2_gloss_factor			= 1.0f;
@@ -275,6 +276,7 @@ void		xrRender_initconsole	()
 
 //.	CMD4(CCC_Float,		"r__detail_density",	&ps_r__Detail_density,		.05f,	0.99f	);
 	CMD4(CCC_Float,		"r__detail_density",	&ps_r__Detail_density,		.2f,	0.6f	);
+	CMD4(CCC_Float,		"r__detail_obj_size",	&ps_r__Detail_obj_size,		.5f,	1.5f	);
 
 #ifdef DEBUG
 	CMD4(CCC_Float,		"r__detail_l_ambient",	&ps_r__Detail_l_ambient,	.5f,	.95f	);

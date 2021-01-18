@@ -165,7 +165,7 @@ Device.Statistic->TEST0.End		();
 			Item_P.y	= y;
 
 			// Angles and scale
-			Item.scale	= r_scale.randF		(Dobj->m_fMinScale*0.5f,Dobj->m_fMaxScale*0.9f);
+			Item.scale	= r_scale.randF		(Dobj->m_fMinScale*0.5f,Dobj->m_fMaxScale*1.0f) * ps_current_detail_obj_size;
 
 			// X-Form BBox
 			Fmatrix		mScale,mXform;
