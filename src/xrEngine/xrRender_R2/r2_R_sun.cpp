@@ -861,6 +861,9 @@ void CRender::render_sun				()
 			RCache.set_xform_view				(Fidentity					);
 			RCache.set_xform_project			(fuckingsun->X.D.combine	);	
 			r_dsgraph_render_graph				(0);
+			// Detail-объекты: тень от Солнца (Луны)
+			if (ps_r2_ls_flags.test(R2FLAG_SUN_DETAILS))
+				Details->Render();
 			fuckingsun->X.D.transluent			= FALSE;
 			if (bSpecial)						{
 				fuckingsun->X.D.transluent			= TRUE;
