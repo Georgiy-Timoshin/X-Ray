@@ -4,6 +4,7 @@
 // #define USE_SUPER_SPECULAR
 
 #include "shared\common.h"
+#include "options.h"
 //////////////////////////////////////////////////////////////////////////////////////////
 // *** options
 
@@ -133,7 +134,7 @@ struct         p_bumped        {
         half3       M1                : TEXCOORD2;        // nmap 2 eye - 1
         half3       M2                : TEXCOORD3;        // nmap 2 eye - 2
         half3       M3                : TEXCOORD4;        // nmap 2 eye - 3
-#ifdef USE_PARALLAX
+#if defined(USE_PARALLAX) || defined(USE_PARALLAX_OCCLUSION)
         half3       eye                : TEXCOORD5;        // vector to point in tangent space
   #ifdef USE_TDETAIL
         float2      tcdbump     : TEXCOORD6;        // d-bump
@@ -266,6 +267,70 @@ float3	v_sun_wrap      (float3 n, float w)                	{        return L_sun
 half3   p_hemi          (float2 tc)                         {
         half3        	t_lmh         = tex2D             	(s_hemi, tc);
         return  dot     (t_lmh,1.h/3.h);
+}
+
+float2 lod				(float3 eye, float2 tc, sampler2D s_base)
+{
+	half		height					=	tex2D(s_base, tc).w * 0.016 - 0.009;    
+    return tc + height * normalize(eye);
+}
+
+float2 AdvancedParallax	(float3 eye, float2 tc, sampler2D s_base)
+{
+	const int	maxSamples				=	MAX_SAMPLES;
+	const int	minSamples				=	MIN_SAMPLES;
+	float		fParallaxOffset			=	PARALLAX_OFFSET;
+	int			nNumSteps				=	lerp(maxSamples, minSamples, normalize(eye).z);
+	float2		vDelta					=	-normalize(eye).xy * fParallaxOffset;
+
+	#ifdef CORRECT_PERSPECTIVE
+				vDelta					/=	normalize(eye).z;
+	#endif
+
+	float		fStepSize				=	1.0 / nNumSteps;
+	float2		vTexOffsetPerStep		=	fStepSize * vDelta;
+	double2		vTexCurrentOffset		=	tc;
+
+	float		fCurrHeight				=	0;
+	float		fCurrentBound			=	1.0;
+
+	for (;fCurrHeight < fCurrentBound; fCurrentBound -= fStepSize)
+	{
+				vTexCurrentOffset.xy	+=	vTexOffsetPerStep;
+				fCurrHeight				=	tex2Dlod(s_base, float4(vTexCurrentOffset.xy, 0, 0)).a;
+	}
+ 
+	float4		offsetBest				=	float4(vTexCurrentOffset, 0, 0);
+				vTexCurrentOffset.xy	-=	vTexOffsetPerStep;
+	float		fPrevHeight				=	tex2Dlod(s_base, float4(vTexCurrentOffset.xy, 0, 0)).a;
+	float		error					=	1.0;
+	float		t1						=	fCurrentBound;
+	float		t0						=	t1 + fStepSize;
+	float		delta1					=	t1 - fCurrHeight;
+	float		delta0					=	t0 - fPrevHeight;
+	float4		intersect				=	float4(vDelta, vDelta + tc);
+
+	for (int i = 0; i < FINAL_INTERSECTION_LOOPS && abs(error) > 0.01; i++)
+    { 
+		float	denom					=	delta1 - delta0;
+		float	t						=	(t0 * delta1 - t1 * delta0) / denom;
+				offsetBest.xy			=	-t * intersect.xy + intersect.zw;
+		float	NB						=	tex2Dlod(s_base, offsetBest).a;
+				error					=	t - NB;
+
+		if (error < 0)
+		{
+			delta1	= error;
+			t1		= t;
+		}
+		else
+		{
+			delta0	= error;
+			t0		= t;
+		}
+	}
+
+	return offsetBest.xy;
 }
 
 #define FXPS technique _render{pass _code{PixelShader=compile ps_3_0 main();}}
