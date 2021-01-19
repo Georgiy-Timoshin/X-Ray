@@ -620,8 +620,8 @@ Global
 		{963BA4E5-499A-454D-B002-1D5ECE0527A6}.Template|Win32.ActiveCfg = Release|Win32
 		{963BA4E5-499A-454D-B002-1D5ECE0527A6}.Template|Win32.Build.0 = Release|Win32
 		{963BA4E5-499A-454D-B002-1D5ECE0527A6}.Template|x64.ActiveCfg = Release|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Dedicated|Win32.ActiveCfg = Debug_Priquel|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Dedicated|Win32.Build.0 = Debug_Priquel|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Dedicated|Win32.ActiveCfg = Debug|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Dedicated|Win32.Build.0 = Debug|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Dedicated|x64.ActiveCfg = Debug_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Priquel|Win32.ActiveCfg = Debug_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug_Priquel|Win32.Build.0 = Debug_Priquel|Win32
@@ -629,8 +629,8 @@ Global
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug|Win32.ActiveCfg = Debug|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug|Win32.Build.0 = Debug|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Debug|x64.ActiveCfg = Debug|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Dedicated|Win32.ActiveCfg = Mixed_Priquel|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Dedicated|Win32.Build.0 = Mixed_Priquel|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Dedicated|Win32.ActiveCfg = Mixed|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Dedicated|Win32.Build.0 = Mixed|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Dedicated|x64.ActiveCfg = Mixed_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Priquel|Win32.ActiveCfg = Mixed_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed_Priquel|Win32.Build.0 = Mixed_Priquel|Win32
@@ -638,8 +638,8 @@ Global
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed|Win32.ActiveCfg = Mixed|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed|Win32.Build.0 = Mixed|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Mixed|x64.ActiveCfg = Mixed|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Dedicated|Win32.ActiveCfg = Release_Priquel|Win32
-		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Dedicated|Win32.Build.0 = Release_Priquel|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Dedicated|Win32.ActiveCfg = Release|Win32
+		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Dedicated|Win32.Build.0 = Release|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Dedicated|x64.ActiveCfg = Release_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Priquel|Win32.ActiveCfg = Release_Priquel|Win32
 		{200652A6-043E-4634-8837-87983B3BD5E0}.Release_Priquel|Win32.Build.0 = Release_Priquel|Win32
