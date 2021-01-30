@@ -27,6 +27,6 @@ void CUIRadioButton::InitTexture(LPCSTR tex_name)
 	CUI3tButton::InitTexture(tex_name);
 	Frect r = m_background.GetE()->GetStaticItem()->GetRect();
 	CUI3tButton::SetTextX(r.width());
-	CUI3tButton::Init(GetWndPos().x, GetWndPos().y, GetWidth(), r.height() - 5);
+	CUI3tButton::Init(GetWndPos().x, GetWndPos().y, GetWidth(), GetHeight());
 	m_pLines->Init(GetWndPos().x, GetWndPos().y, GetWidth(), m_background.GetE()->GetStaticItem()->GetRect().height());
 }
