@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////
-// UIRadioButton.h: класс кнопки, имеющей 2 состояния
-// и работающей в группе с такими же кнопками
+// UIRadioButton.h: РєР»Р°СЃСЃ РєРЅРѕРїРєРё, РёРјРµСЋС‰РµР№ 2 СЃРѕСЃС‚РѕСЏРЅРёСЏ
+// Рё СЂР°Р±РѕС‚Р°СЋС‰РµР№ РІ РіСЂСѓРїРїРµ СЃ С‚Р°РєРёРјРё Р¶Рµ РєРЅРѕРїРєР°РјРё
 //////////////////////////////////////////////////////////////////////
 
 #ifndef _UI_RADIO_BUTTON_H_
@@ -13,6 +13,9 @@
 class CUIRadioButton : public CUITabButton
 {
 public:
+	CUIRadioButton(void);
+	virtual ~CUIRadioButton(void);
+
 	virtual void Init(float x, float y, float width, float height);
 	virtual void InitTexture(LPCSTR tex_name);
 	virtual void SetTextX(float x)	{/*do nothing*/}

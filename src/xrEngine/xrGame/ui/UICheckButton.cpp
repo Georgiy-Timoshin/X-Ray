@@ -1,9 +1,9 @@
-// UICheckButton.cpp: êëàññ êíîïêè, èìåþùåé 2 ñîñòîÿíèÿ:
-// ñ ãàëî÷êîé è áåç
-//////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+// UICheckButton.cpp: ÐºÐ»Ð°ÑÑ ÐºÐ½Ð¾Ð¿ÐºÐ¸, Ð¸Ð¼ÐµÑŽÑ‰ÐµÐ¹ 2 ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸Ñ: Ñ Ð³Ð°Ð»Ð¾Ñ‡ÐºÐ¾Ð¹ Ð¸ Ð±ÐµÐ·
+/////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-#include ".\uicheckbutton.h"
+#include "UICheckButton.h"
 #include "../HUDManager.h"
 #include "UILines.h"
 
@@ -18,11 +18,13 @@ CUICheckButton::~CUICheckButton(void)
 {
 }
 
-void CUICheckButton::SetDependControl(CUIWindow* pWnd){
+void CUICheckButton::SetDependControl(CUIWindow* pWnd)
+{
 	m_pDependControl = pWnd;
 }
 
-void CUICheckButton::Update(){
+void CUICheckButton::Update()
+{
 	CUI3tButton::Update();
 
 	if (m_pDependControl)
@@ -30,30 +32,20 @@ void CUICheckButton::Update(){
 }
 
 
-void CUICheckButton::SetCurrentValue(){
+void CUICheckButton::SetCurrentValue()
+{
 	SetCheck(GetOptBoolValue());
 }
 
-void CUICheckButton::SaveValue(){
+void CUICheckButton::SaveValue()
+{
 	CUIOptionsItem::SaveValue();
 	SaveOptBoolValue(GetCheck());
 }
 
-bool CUICheckButton::IsChanged(){
-	return b_backup_val != GetCheck();
-}
-
-void CUICheckButton::Init(float x, float y, float width, float height){
-	CUIWindow::Init(x,y,width,height);
-	InitTexture();
-	m_pLines->Init(x,y,width,m_background.GetE()->GetStaticItem()->GetRect().height());
-}
-
-void CUICheckButton::InitTexture()
+bool CUICheckButton::IsChanged()
 {
-	CUI3tButton::InitTexture("ui_checker");
-	Frect r = m_background.GetE()->GetStaticItem()->GetOriginalRect();
-	CUI3tButton::SetTextX(r.width());	
+	return b_backup_val != GetCheck();
 }
 
 void CUICheckButton::SeveBackUpValue()
@@ -63,6 +55,21 @@ void CUICheckButton::SeveBackUpValue()
 
 void CUICheckButton::Undo()
 {
-	SetCheck		(b_backup_val);
-	SaveValue		();
+	SetCheck(b_backup_val);
+	SaveValue();
+}
+
+void CUICheckButton::Init(float x, float y, float width, float height)
+{
+	CUI3tButton::Init(x, y, width, height);
+	InitTexture("ui_checker");
+}
+
+void CUICheckButton::InitTexture(LPCSTR tex_name)
+{
+	CUI3tButton::InitTexture(tex_name);
+	Frect r = m_background.GetE()->GetStaticItem()->GetOriginalRect();
+	CUI3tButton::SetTextX(r.width());
+	CUI3tButton::Init(GetWndPos().x, GetWndPos().y, GetWidth(), r.height() - 5);
+	m_pLines->Init(GetWndPos().x, GetWndPos().y, GetWidth(), m_background.GetE()->GetStaticItem()->GetRect().height());
 }
