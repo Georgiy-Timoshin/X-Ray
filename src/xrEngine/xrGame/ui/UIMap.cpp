@@ -48,6 +48,14 @@ void CUICustomMap::Init	(shared_str name, CInifile& gameLtx, LPCSTR sh_name)
 		tex = "ui\\ui_nomap2";
 		tmp.set(-10000.0f,-10000.0f,10000.0f,10000.0f);
 	}
+
+	// Глобальная карта: исправление растянутой карты на широкоформатных мониторах
+	if (!Heading())
+	{
+		tmp.x *= UI()->get_current_kx();
+		tmp.z *= UI()->get_current_kx();
+	}
+
 	m_BoundRect.set		(tmp.x, tmp.y, tmp.z, tmp.w);
 	CUIStatic::InitEx	(tex, sh_name, 0, 0, m_BoundRect.width(), m_BoundRect.height() );
 	
@@ -55,12 +63,13 @@ void CUICustomMap::Init	(shared_str name, CInifile& gameLtx, LPCSTR sh_name)
 	ClipperOn			();
 }
 
-void rotation_(float x, float y, const float angle, float& x_, float& y_)
+void rotation_(float x, float y, const float angle, float& x_, float& y_, float kx)
 {
 	float _sc = _cos(angle);
 	float _sn = _sin(angle);
 	x_= x*_sc+y*_sn;
 	y_= y*_sc-x*_sn;
+	x_ *= kx;
 }
 
 Fvector2 CUICustomMap::ConvertLocalToReal(const Fvector2& src)
@@ -72,20 +81,35 @@ Fvector2 CUICustomMap::ConvertLocalToReal(const Fvector2& src)
 	return res;
 }
 
-Fvector2 CUICustomMap::ConvertRealToLocal  (const Fvector2& src)// meters->pixels (relatively own left-top pos)
+Fvector2 CUICustomMap::ConvertRealToLocal  (const Fvector2& src, bool for_drawing)// meters->pixels (relatively own left-top pos)
 {
 	Fvector2 res;
-	if( !Heading() ){
-		return ConvertRealToLocalNoTransform(src);
-	}else{
+	if (!Heading())
+	{
+		Frect bound_rect = BoundRect();
+		bound_rect.x1 /= UI()->get_current_kx();
+		bound_rect.x2 /= UI()->get_current_kx();
+		res = ConvertRealToLocalNoTransform(src, bound_rect);
+		res.x *= UI()->get_current_kx();
+	}
+	else
+	{
 		Fvector2 heading_pivot = GetStaticItem()->GetHeadingPivot();
-	
 		res = ConvertRealToLocalNoTransform(src);
 		res.sub(heading_pivot);
-		rotation_(res.x, res.y, GetHeading(), res.x, res.y);
+		rotation_(res.x, res.y, GetHeading(), res.x, res.y, for_drawing ? UI()->get_current_kx() : 1.0f);
 		res.add(heading_pivot);
-		return res;
 	};
+	return res;
+}
+
+Fvector2 CUICustomMap::ConvertRealToLocalNoTransform  (const Fvector2& src, Frect const& bound_rect)// meters->pixels (relatively own left-top pos)
+{
+	Fvector2 res;
+	res.x = (src.x-bound_rect.lt.x) * GetCurrentZoom();
+	res.y = (bound_rect.height()-(src.y-bound_rect.lt.y)) * GetCurrentZoom();
+
+	return res;
 }
 
 Fvector2 CUICustomMap::ConvertRealToLocalNoTransform  (const Fvector2& src)// meters->pixels (relatively own left-top pos)
@@ -274,7 +298,7 @@ void CUIGlobalMap::ClipByVisRect()
 	SetWndPos				(r.x1,r.y1);
 }
 
-Fvector2 CUIGlobalMap::ConvertRealToLocal(const Fvector2& src)// pixels->pixels (relatively own left-top pos)
+Fvector2 CUIGlobalMap::ConvertRealToLocal(const Fvector2& src, bool for_drawing)// pixels->pixels (relatively own left-top pos)
 {
 	Fvector2 res;
 	res.x = (src.x-m_BoundRect.lt.x) * GetCurrentZoom();
@@ -364,6 +388,11 @@ void CUILevelMap::Init	(shared_str name, CInifile& gameLtx, LPCSTR sh_name)
 {
 	inherited::Init(name, gameLtx, sh_name);
 	Fvector4 tmp = gameLtx.r_fvector4(MapName(),"global_rect");
+
+	// Карты локации: исправление растянутых карт на широкоформатных мониторах
+	tmp.x *= UI()->get_current_kx();
+	tmp.z *= UI()->get_current_kx();
+
 	m_GlobalRect.set(tmp.x, tmp.y, tmp.z, tmp.w);
 
 #ifdef DEBUG
@@ -421,8 +450,8 @@ Frect CUILevelMap::CalcWndRectOnGlobal	()
 	Frect res;
 	CUIGlobalMap* globalMap			= MapWnd()->GlobalMap();
 
-	res.lt							= globalMap->ConvertRealToLocal(GlobalRect().lt);
-	res.rb							= globalMap->ConvertRealToLocal(GlobalRect().rb);
+	res.lt							= globalMap->ConvertRealToLocal(GlobalRect().lt, false);
+	res.rb							= globalMap->ConvertRealToLocal(GlobalRect().rb, false);
 	res.add							(globalMap->GetWndPos().x, globalMap->GetWndPos().y);
 
 	return res;
@@ -434,9 +463,9 @@ void CUILevelMap::Update()
 	Frect			rect;
 	Fvector2		tmp;
 
-	tmp								= w->ConvertRealToLocal(GlobalRect().lt);
+	tmp								= w->ConvertRealToLocal(GlobalRect().lt, false);
 	rect.lt							= tmp;
-	tmp								= w->ConvertRealToLocal(GlobalRect().rb);
+	tmp								= w->ConvertRealToLocal(GlobalRect().rb, false);
 	rect.rb							= tmp;
 
 	SetWndRect						(rect);
