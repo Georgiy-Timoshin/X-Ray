@@ -308,6 +308,12 @@ bool CUIXmlInit::Init3tButton(CUIXml& xml_doc, const char* path, int index, CUI3
 	InitTextureOffset	(xml_doc, path, index, pWnd);
 	InitSound			(xml_doc, path, index, pWnd);
 
+	bool flag = xml_doc.ReadAttribInt(path, index, "heading", 0);
+	pWnd->EnableHeading((flag) ? true : false);
+
+	bool stretch_flag = xml_doc.ReadAttribInt(path, index, "stretch") ? true : false;
+	pWnd->SetStretchTexture(stretch_flag);
+
 	LPCSTR accel		= xml_doc.ReadAttrib(path, index, "accel", NULL);
 	if(accel)
 	{
@@ -1039,7 +1045,8 @@ bool CUIXmlInit::InitMultiTexture(CUIXml &xml_doc, LPCSTR path, int index, CUI3t
 	texture = xml_doc.Read(buff, index, NULL);
 	if (texture.size())
 	{
-        pWnd->m_background.CreateE()->InitTexture(*texture);
+		auto e = pWnd->m_background.CreateE();
+		e->InitTexture(*texture);
 		success = true;
 	}
 
@@ -1047,7 +1054,8 @@ bool CUIXmlInit::InitMultiTexture(CUIXml &xml_doc, LPCSTR path, int index, CUI3t
 	texture = xml_doc.Read(buff, index, NULL);
 	if (texture.size())
 	{
-		pWnd->m_background.CreateT()->InitTexture(*texture);
+		auto t = pWnd->m_background.CreateT();
+		t->InitTexture(*texture);
 		success = true;
 	}
 
@@ -1055,7 +1063,8 @@ bool CUIXmlInit::InitMultiTexture(CUIXml &xml_doc, LPCSTR path, int index, CUI3t
 	texture = xml_doc.Read(buff, index, NULL);
 	if (texture.size())
 	{
-		pWnd->m_background.CreateD()->InitTexture(*texture);
+		auto d = pWnd->m_background.CreateD();
+		d->InitTexture(*texture);
 		success = true;
 	}
 
@@ -1063,7 +1072,8 @@ bool CUIXmlInit::InitMultiTexture(CUIXml &xml_doc, LPCSTR path, int index, CUI3t
 	texture = xml_doc.Read(buff, index, NULL);   
 	if (texture.size())
 	{
-		pWnd->m_background.CreateH()->InitTexture(*texture);
+		auto h = pWnd->m_background.CreateH();
+		h->InitTexture(*texture);
 		success = true;
 	}
 

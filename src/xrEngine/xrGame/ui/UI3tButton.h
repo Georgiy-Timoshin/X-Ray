@@ -51,7 +51,8 @@ public:
 	virtual bool 	OnMouse						(float x, float y, EUIMessages mouse_action);
 	virtual bool 	OnMouseDown					(int mouse_btn);
 			void 	SetCheckMode				(bool mode) {m_bCheckMode = mode;}
-
+	virtual void	SetStretchTexture			(bool stretch_texture);
+	virtual void	EnableHeading				(bool b);
 
 	CUIStatic			m_hint;
 	CUI_IB_Static		m_background;

@@ -236,3 +236,15 @@ void CUI3tButton::Update()
 	CUIStatic::SetTextColor		(textColor);
 	m_hint.SetTextColor			(hintColor);
 }
+
+void CUI3tButton::SetStretchTexture(bool stretch_texture)
+{
+	CUIButton::SetStretchTexture(stretch_texture);
+	m_background.SetStretchTexture(stretch_texture);
+}
+
+void CUI3tButton::EnableHeading(bool b)
+{
+	CUIButton::EnableHeading(b);
+	m_background.EnableHeading(b);
+}

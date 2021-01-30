@@ -128,7 +128,7 @@ public:
 			float GetTextX					()						{return m_TextOffset.x;}
 			float GetTextY					()						{return m_TextOffset.y;}
 
-	void		SetStretchTexture			(bool stretch_texture)	{m_bStretchTexture = stretch_texture;}
+	virtual	void SetStretchTexture			(bool stretch_texture)	{m_bStretchTexture = stretch_texture;}
 	bool		GetStretchTexture			()						{return m_bStretchTexture;}
 
 	void		SetClipRect					(Frect r);
@@ -151,7 +151,7 @@ public:
 	void	SetHeading						(float f)				{m_fHeading = f;};
 	float	GetHeading						()						{return m_fHeading;}
 	bool	Heading							()						{return m_bHeading;}
-	void	EnableHeading					(bool b)				{m_bHeading = b;m_lanim_xform.m_lanimFlags.set((1<<4),b);}
+	virtual void EnableHeading				(bool b)				{m_bHeading = b;m_lanim_xform.m_lanimFlags.set((1<<4),b);}
 
 	// will be need by CUI3tButton
 	// Don't change order!!!!!
