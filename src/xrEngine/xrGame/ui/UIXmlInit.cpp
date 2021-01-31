@@ -176,8 +176,7 @@ bool CUIXmlInit::InitStatic(CUIXml& xml_doc, LPCSTR path,
 	InitTexture			(xml_doc, path, index, pWnd);
 	InitTextureOffset	(xml_doc,path,index,pWnd);
 
-	int flag = xml_doc.ReadAttribInt(path, index, "heading", 0);
-	pWnd->EnableHeading( (flag)?true:false);
+	pWnd->EnableHeading(!!xml_doc.ReadAttribInt(path, index, "heading", 0));
 
 	LPCSTR str_flag				= xml_doc.ReadAttrib(path, index, "light_anim",		"");
 	int flag_cyclic				= xml_doc.ReadAttribInt(path, index, "la_cyclic",	1);
@@ -308,11 +307,8 @@ bool CUIXmlInit::Init3tButton(CUIXml& xml_doc, const char* path, int index, CUI3
 	InitTextureOffset	(xml_doc, path, index, pWnd);
 	InitSound			(xml_doc, path, index, pWnd);
 
-	bool flag = xml_doc.ReadAttribInt(path, index, "heading", 0);
-	pWnd->EnableHeading((flag) ? true : false);
-
-	bool stretch_flag = xml_doc.ReadAttribInt(path, index, "stretch") ? true : false;
-	pWnd->SetStretchTexture(stretch_flag);
+	pWnd->EnableHeading(!!xml_doc.ReadAttribInt(path, index, "heading", 0));
+	pWnd->SetStretchTexture(!!xml_doc.ReadAttribInt(path, index, "stretch"));
 
 	LPCSTR accel		= xml_doc.ReadAttrib(path, index, "accel", NULL);
 	if(accel)
@@ -1001,8 +997,7 @@ bool CUIXmlInit::InitTexture(CUIXml& xml_doc, const char* path, int index, IUISi
 	rect.x2			= rect.x1 + xml_doc.ReadAttribFlt(buf, index, "width", 0);	
 	rect.y2			= rect.y1 + xml_doc.ReadAttribFlt(buf, index, "height", 0);
 
-	bool stretch_flag = xml_doc.ReadAttribInt(path, index, "stretch") ? true : false;
-	pWnd->SetStretchTexture(stretch_flag);
+	pWnd->SetStretchTexture(!!xml_doc.ReadAttribInt(path, index, "stretch"));
 
 	u32 color = GetColor(xml_doc, buf, index, 0xff);
 	pWnd->SetTextureColor(color);
