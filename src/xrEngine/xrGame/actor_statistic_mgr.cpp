@@ -157,6 +157,7 @@ void CActorStatisticMgr::AddPoints(const shared_str& key, const shared_str& deta
 	SStatDetailBData& d			= sect.GetData		(detail_key);
 	d.int_count					+= cnt;
 	d.int_points				+= cnt*pts;
+	d.int_points				= pts;
 }
 
 s32 CActorStatisticMgr::GetSectionPoints(const shared_str& key)
