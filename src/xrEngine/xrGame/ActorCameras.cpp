@@ -315,7 +315,7 @@ void CActor::cam_Update(float dt, float fFOV)
 	if (Level().CurrentEntity() == this)
 	{
 		Level().Cameras().Update	(C);
-		if(eacFirstEye == cam_active && !Level().Cameras().GetCamEffector(cefDemo)){
+		if((eacFirstEye == cam_active || eacLookAt == cam_active) && !Level().Cameras().GetCamEffector(cefDemo)){	// применить все эффекторы для режима cam_2
 			Cameras().ApplyDevice	(_viewport_near);
 		}
 	}
