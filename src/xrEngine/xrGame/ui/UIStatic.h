@@ -197,6 +197,7 @@ protected:
 	int	m_iElipsisIndent;
 	Frect	m_ClipRect;
 
+private:
 	Frect	m_xxxRect; // need by RescaleRelative2Rect(Frect& r). it is initializes only once in Init(x,y,width,height)
 
 public:
