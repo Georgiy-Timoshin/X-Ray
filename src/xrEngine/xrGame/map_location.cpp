@@ -426,7 +426,8 @@ void CMapLocation::UpdateSpot(CUICustomMap* map, CMapSpot* sp )
 			if(bDone){
 				Fvector2 position;
 				position.set			((*lit)->Position().x, (*lit)->Position().z);
-				m_position_on_map		= map->ConvertRealToLocal(position, false);
+				// Миникарта: исправление отображения стрелки "по овалу" на широкоформатных мониторах
+				m_position_on_map		= map->ConvertRealToLocal(position, true);
 				UpdateSpotPointer		(map, GetSpotPointer(sp));
 			}
 		}
