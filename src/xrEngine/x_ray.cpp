@@ -476,12 +476,9 @@ BOOL IsOutOfVirtualMemory()
 #include "xr_ioc_cmd.h"
 
 typedef void DUMMY_STUFF (const void*,const u32&,void*);
-XRCORE_API DUMMY_STUFF	*g_temporary_stuff;
+XRCORE_API DUMMY_STUFF*	g_temporary_stuff;
 
-#define TRIVIAL_ENCRYPTOR_DECODER
 #include "trivial_encryptor.h"
-
-//#define RUSSIAN_BUILD
 
 #if 0
 void foo	()
