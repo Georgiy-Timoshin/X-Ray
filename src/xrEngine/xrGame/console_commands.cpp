@@ -38,7 +38,7 @@
 #include "saved_game_wrapper.h"
 #include "level_graph.h"
 #include "../resourcemanager.h"
-#include "doug_lea_memory_allocator.h"
+#include "../doug_lea_memory_allocator.h"
 #include "cameralook.h"
 
 #include "GameSpy/GameSpy_Full.h"

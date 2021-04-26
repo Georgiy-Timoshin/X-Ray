@@ -196,7 +196,6 @@
     <ClInclude Include="..\xrRender\PSLibrary.h" />
     <ClInclude Include="..\xrRender\r__dsgraph_structure.h" />
     <ClInclude Include="..\xrRender\r__dsgraph_types.h" />
-    <ClInclude Include="..\xrRender\doug_lea_memory_allocator.h" />
     <ClInclude Include="..\xrRender\DetailFormat.h" />
     <ClInclude Include="..\xrRender\DetailManager.h" />
     <ClInclude Include="..\xrRender\DetailModel.h" />

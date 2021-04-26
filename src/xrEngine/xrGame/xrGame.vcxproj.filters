@@ -4656,7 +4656,7 @@
     <ClInclude Include="script_stack_tracker_inline.h">
       <Filter>AI\AScript\ScriptThread\ScriptStackTracker</Filter>
     </ClInclude>
-    <ClInclude Include="doug_lea_memory_allocator.h">
+    <ClInclude Include="../doug_lea_memory_allocator.h">
       <Filter>AI\AScript\memory_allocator</Filter>
     </ClInclude>
     <ClInclude Include="ai_sounds.h">

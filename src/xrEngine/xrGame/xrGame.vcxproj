@@ -1272,7 +1272,7 @@
     <ClInclude Include="script_thread_inline.h" />
     <ClInclude Include="script_stack_tracker.h" />
     <ClInclude Include="script_stack_tracker_inline.h" />
-    <ClInclude Include="doug_lea_memory_allocator.h" />
+    <ClInclude Include="../doug_lea_memory_allocator.h" />
     <ClInclude Include="ai_sounds.h" />
     <ClInclude Include="ai_space.h" />
     <ClInclude Include="ai_space_inline.h" />

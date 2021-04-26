@@ -614,7 +614,7 @@ DEFAULT_MMAP_THRESHOLD       default: 256K
 #define HAVE_USR_INCLUDE_MALLOC_H
 
 #ifdef HAVE_USR_INCLUDE_MALLOC_H
-#include "doug_lea_memory_allocator.h"
+#include "../doug_lea_memory_allocator.h"
 #else /* HAVE_USR_INCLUDE_MALLOC_H */
 
 struct mallinfo {

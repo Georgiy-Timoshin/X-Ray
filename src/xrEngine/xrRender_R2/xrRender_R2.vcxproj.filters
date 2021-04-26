@@ -81,9 +81,6 @@
     <ClInclude Include="..\xrRender\r__pixel_calculator.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="doug_lea_memory_allocator.h">
-      <Filter>Core\memory</Filter>
-    </ClInclude>
     <ClInclude Include="DetailFormat.h">
       <Filter>Details</Filter>
     </ClInclude>
