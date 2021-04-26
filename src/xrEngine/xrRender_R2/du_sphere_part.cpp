@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#include "du_sphere_part.h"
+#include "../du_sphere_part.h"
 //---------------------------------------------------------------------------
 #pragma warning(disable:4305)
 Fvector du_sphere_part_vertices[DU_SPHERE_PART_NUMVERTEX]=

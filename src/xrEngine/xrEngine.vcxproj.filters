@@ -312,9 +312,6 @@
     <ClInclude Include="vis_common.h">
       <Filter>Interfaces\Render\Visibility</Filter>
     </ClInclude>
-    <ClInclude Include="Frustum.h">
-      <Filter>Interfaces\Render\Visibility\Frustum</Filter>
-    </ClInclude>
     <ClInclude Include="PS_instance.h">
       <Filter>Interfaces\Render\Particle system</Filter>
     </ClInclude>
@@ -484,9 +481,6 @@
       <Filter>Engine\Core</Filter>
     </ClInclude>
     <ClInclude Include="EventAPI.h">
-      <Filter>Engine\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="xrCPU_Pipe.h">
       <Filter>Engine\Core</Filter>
     </ClInclude>
     <ClInclude Include="ai_script_lua_extension.h">

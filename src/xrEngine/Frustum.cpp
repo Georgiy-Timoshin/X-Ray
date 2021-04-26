@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#include "Frustum.h"
+#include "../xrCDB/Frustum.h"
 
 //////////////////////////////////////////////////////////////////////
 void			CFrustum::fplane::cache	()	{

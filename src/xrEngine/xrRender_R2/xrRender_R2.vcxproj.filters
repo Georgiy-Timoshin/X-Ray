@@ -51,9 +51,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cl_intersect.h">
-      <Filter>Kernel</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Kernel</Filter>
     </ClInclude>
@@ -230,9 +227,6 @@
     </ClInclude>
     <ClInclude Include="..\xrRender\occRasterizer.h">
       <Filter>Visibility\HOM Occlusion</Filter>
-    </ClInclude>
-    <ClInclude Include="du_sphere_part.h">
-      <Filter>Core_Target</Filter>
     </ClInclude>
     <ClInclude Include="r2_rendertarget.h">
       <Filter>Core_Target</Filter>

@@ -541,7 +541,6 @@
     <ClInclude Include="SkeletonMotions.h" />
     <ClInclude Include="SkeletonX.h" />
     <ClInclude Include="vis_common.h" />
-    <ClInclude Include="Frustum.h" />
     <ClInclude Include="PS_instance.h" />
     <ClInclude Include="LightAnimLibrary.h" />
     <ClInclude Include="GameFont.h" />
@@ -599,7 +598,6 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EngineAPI.h" />
     <ClInclude Include="EventAPI.h" />
-    <ClInclude Include="xrCPU_Pipe.h" />
     <ClInclude Include="ai_script_lua_extension.h" />
     <ClInclude Include="ai_script_lua_space.h" />
     <ClInclude Include="ai_script_space.h" />

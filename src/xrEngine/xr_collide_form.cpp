@@ -7,7 +7,7 @@
 #include "xrLevel.h"
 #include "fmesh.h"
 #include "skeletoncustom.h"
-#include "frustum.h"
+#include "../xrCDB/Frustum.h"
 
 using namespace	collide;
 //----------------------------------------------------------------------
