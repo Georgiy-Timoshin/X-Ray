@@ -393,7 +393,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FTimer.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="xrCore.h" />
     <ClInclude Include="xrCore_platform.h" />
@@ -491,9 +490,6 @@
     <ClInclude Include="rt_lzodefs.h" />
     <ClInclude Include="rt_miniacc.h" />
     <ClInclude Include="xrSyncronize.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="xrCore.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

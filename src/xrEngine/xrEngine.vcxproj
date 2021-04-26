@@ -782,16 +782,13 @@
     <ClCompile Include="perlin.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="OutOfVirtError.RES" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="stalker.ico">
+    <None Include="resources/icon.ico">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="ui_splash3.bmp" />
+    <None Include="resources/splash.bmp" />
     <None Include="ClientServer.txt" />
     <None Include="Effects description.txt" />
     <None Include="features.txt" />

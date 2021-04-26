@@ -877,20 +877,15 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="OutOfVirtError.RES">
-      <Filter>General\Resources</Filter>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="resource.rc">
       <Filter>General\Resources</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="stalker.ico">
+    <None Include="resources/icon.ico">
       <Filter>General\Resources</Filter>
     </None>
-    <None Include="ui_splash3.bmp">
+    <None Include="resources/splash.bmp">
       <Filter>General\Resources</Filter>
     </None>
     <None Include="ClientServer.txt" />
