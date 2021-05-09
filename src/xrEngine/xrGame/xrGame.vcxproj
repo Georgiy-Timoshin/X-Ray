@@ -1579,7 +1579,6 @@
     <ClInclude Include="FastDelegate.h" />
     <ClInclude Include="ItemListTypes.h" />
     <ClInclude Include="PropertiesListHelper.h" />
-    <ClInclude Include="WaveForm.h" />
     <ClInclude Include="xrEProps.h" />
     <ClInclude Include="game_base.h" />
     <ClInclude Include="game_base_kill_type.h" />

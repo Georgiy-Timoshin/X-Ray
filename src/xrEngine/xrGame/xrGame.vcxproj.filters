@@ -5565,9 +5565,6 @@
     <ClInclude Include="PropertiesListHelper.h">
       <Filter>Core\Server\Editor</Filter>
     </ClInclude>
-    <ClInclude Include="WaveForm.h">
-      <Filter>Core\Server\Editor</Filter>
-    </ClInclude>
     <ClInclude Include="xrEProps.h">
       <Filter>Core\Server\Editor</Filter>
     </ClInclude>

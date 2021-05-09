@@ -2,7 +2,7 @@
 #ifndef PropertiesListTypesH
 #define PropertiesListTypesH
 
-#include "WaveForm.H"
+#include "../WaveForm.h"
 
 #ifdef __BORLANDC__            
 #	include "ElTree.hpp"
