@@ -28,9 +28,14 @@ CUICursor::~CUICursor	()
 void CUICursor::InitInternal()
 {
 	m_static					= xr_new<CUIStatic>();
-	m_static->InitTextureEx		("ui\\ui_ani_cursor", "hud\\cursor");
+
+	if (Device.dwWidth >= 1920)
+		m_static->InitTextureEx	("ui\\cursor\\cursor_big");
+	else
+		m_static->InitTextureEx	("ui\\cursor\\cursor_small");
+
 	Frect						rect;
-	rect.set					(0.0f,0.0f,40.0f,40.0f);
+	rect.set					(0.0f,0.0f,64.0f,64.0f);
 	m_static->SetOriginalRect	(rect);
 	Fvector2					sz;
 	sz.set						(rect.rb);
