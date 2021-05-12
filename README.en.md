@@ -1,4 +1,4 @@
-[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/xrModder/X-Ray/blob/master/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/xrModder/X-Ray/blob/main/README.md)
 
 # X-Ray Engine v1.0007rc1
 The original version was used in S.T.A.L.K.E.R.: Shadow of Chernobyl. 
