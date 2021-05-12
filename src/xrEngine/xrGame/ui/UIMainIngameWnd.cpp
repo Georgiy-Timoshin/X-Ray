@@ -38,6 +38,7 @@
 #include "../string_table.h"
 #include "../clsid_game.h"
 #include "UIArtefactPanel.h"
+#include <functional>
 
 #ifdef DEBUG
 #	include "../attachable_item.h"
