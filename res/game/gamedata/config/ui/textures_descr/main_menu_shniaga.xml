@@ -1,0 +1,11 @@
+<w>
+	<file name="ui\main_menu\main_menu_shniaga">
+
+		<texture id="main_menu_shniaga_slider"		x="0"	y="0"	width="313"	height="67" />
+		<texture id="main_menu_shniaga_smallroll_r"	x="313"	y="0"	width="55"	height="55" />
+		<texture id="main_menu_shniaga_smallroll_l"	x="368"	y="0"	width="55"	height="55" />
+		<texture id="main_menu_shniaga_grating_r"	x="313"	y="55"	width="55"	height="67" />
+		<texture id="main_menu_shniaga_grating_l"	x="368"	y="55"	width="55"	height="67" />
+
+	</file>
+</w>

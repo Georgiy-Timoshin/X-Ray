@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+
+	<back_movie x="148" y="0" width="876" height="400">
+		<texture x="0" y="0" width="876" height="400">ui\ui_mm_main_back_crop</texture>
+	</back_movie>
+
+	<background x="0" y="0" width="1024" height="768">
+		<auto_static>
+			<texture>main_menu_back_main</texture>
+		</auto_static>
+	</background>
+
+	<fire_movie x="525" y="459" width="128" height="256">
+		<texture x="0" y="0" width="128" height="256">ui\ui_mm_fire</texture>
+	</fire_movie>
+
+	<shniaga_wnd x="540" y="419" width="400" height="380">
+		<buttons_region	x="75" y="1" width="333" height="380" always_show_scroll="false" />
+
+		<shniaga x="84" y="0" width="313" height="67">
+			<texture>main_menu_shniaga_slider</texture>
+			<magnifire x="51" y="16" width="212" height="40" stretch="1">
+				<texture>ui\main_menu\main_menu_magnifire</texture>
+				<y_offset>-3</y_offset>
+			</magnifire>
+
+			<left_anim x="14" y="34" width="55" height="55" heading="1" alignment="c">
+				<texture>main_menu_shniaga_smallroll_l</texture>
+			</left_anim>
+			<right_anim x="298" y="34" width="55" height="55" heading="1" alignment="c">
+				<texture>main_menu_shniaga_smallroll_r</texture>
+			</right_anim>
+			<left_grating x="-34" y="0" width="55" height="67">
+				<texture>main_menu_shniaga_grating_l</texture>
+			</left_grating>
+			<right_grating x="289" y="0" width="55" height="67">
+				<texture>main_menu_shniaga_grating_r</texture>
+			</right_grating>
+		</shniaga>
+	</shniaga_wnd>
+
+#include "ui\ui_mm_main_buttons.xml"
+
+	<menu_sound random="0" >
+		<!--whell_sound>car\apc_run</whell_sound>
+		<whell_click>car\test_car_stop</whell_click-->
+		<menu_music>music\wasteland2</menu_music>
+		<!--menu_music>music\guitar_2</menu_music>
+		<menu_music>music\guitar_1</menu_music>
+		<menu_music>music\guitar_3</menu_music-->
+	</menu_sound>
+
+	<static_version x="20" y="740" width="100" height="30">
+		<text align="l" font="graffiti19" r="135" g="123" b="116" complex_mode="0"/>
+	</static_version>
+
+</window>
