@@ -1,0 +1,13 @@
+<w>
+	<file name="ui\main_menu\mm_back_03">
+
+		<texture id="mm_back_03_main"	x="0"	y="0"	width="1024"	height="768" />
+		<texture id="mm_back_03_l1"		x="0"	y="768"	width="170"		height="256" />
+		<texture id="mm_back_03_l2"		x="170"	y="768"	width="170"		height="256" />
+		<texture id="mm_back_03_l3"		x="340"	y="768"	width="170"		height="256" />
+		<texture id="mm_back_03_r1"		x="510"	y="768"	width="170"		height="256" />
+		<texture id="mm_back_03_r2"		x="680"	y="768"	width="170"		height="256" />
+		<texture id="mm_back_03_r3"		x="850"	y="768"	width="170"		height="256" />
+
+	</file>
+</w>

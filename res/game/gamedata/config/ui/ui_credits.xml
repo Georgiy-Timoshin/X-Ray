@@ -1,0 +1,35 @@
+
+	<credits_seq>
+
+		<global_wnd x="0" y="0" width="1024" height="768">
+
+			<auto_static x="0" y="0" width="728" height="660">
+				<texture x="0" y="0" width="728" height="660">ui\ui_mm_credits_back</texture>
+			</auto_static>
+
+			<auto_static x="0" y="0" width="1024" height="768">
+				<texture>mm_back_03_main</texture>
+			</auto_static>
+
+			<auto_static x="524" y="641" width="256" height="128">
+				<texture x="0" y="0" width="256" height="128">ui\ui_mm_coal</texture>
+			</auto_static>
+
+		</global_wnd>
+
+		<play_each_item>1</play_each_item>
+
+		<item>
+			<length_sec>499</length_sec>
+			<pause_state>on</pause_state>
+			<function_on_stop>xr_effects.after_credits</function_on_stop>
+			<guard_key/>
+			<pause_sound>on</pause_sound>
+			<sound>Music\credits</sound>
+			<cursor_pos/>
+			<pda_section/>
+			<grab_input>1</grab_input>
+#include "ui\ui_credits_base.xml"
+		</item>
+
+	</credits_seq>
