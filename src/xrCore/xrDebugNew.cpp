@@ -413,14 +413,14 @@ void SetupExceptionHandler	(const bool &dedicated)
 	BT_SetDialogMessage				(
 		BTDM_INTRO2,
 		"\
-This is XRay Engine crash reporting client. \
+This is X-Ray Engine crash reporting client. \
 To help the development process, \
 please Submit Bug or save report and email it manually (button More...).\
 \r\nMany thanks in advance and sorry for the inconvenience."
 	);
 
 	BT_SetPreErrHandler		(PreErrorHandler,0);
-	BT_SetAppName			("XRay Engine");
+	BT_SetAppName			("X-Ray Engine");
 	BT_SetReportFormat		(BTRF_TEXT);
 	BT_SetFlags				(BTF_DETAILEDMODE | /**BTF_EDIETMAIL | /**/BTF_ATTACHREPORT /**| BTF_LISTPROCESSES /**| BTF_SHOWADVANCEDUI /**| BTF_SCREENCAPTURE/**/);
 	BT_SetDumpType			(
