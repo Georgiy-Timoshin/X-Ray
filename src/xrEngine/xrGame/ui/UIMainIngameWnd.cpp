@@ -874,31 +874,31 @@ bool CUIMainIngameWnd::OnKeyboardPress(int dik)
 
 	if(Level().IR_GetKeyState(DIK_LSHIFT) || Level().IR_GetKeyState(DIK_RSHIFT))
 	{
-		switch(dik)
+		switch (dik)
 		{
 		case DIK_NUMPADMINUS:
-			UIZoneMap->ZoomOut();
+			//.HideAll();
+			HUD().GetUI()->HideGameIndicators();
+			psHUD_Flags.set(HUD_DRAW, FALSE);
 			return true;
 			break;
 		case DIK_NUMPADPLUS:
-			UIZoneMap->ZoomIn();
+			//.ShowAll();
+			HUD().GetUI()->ShowGameIndicators();
+			psHUD_Flags.set(HUD_DRAW, TRUE);
 			return true;
 			break;
 		}
 	}
 	else
 	{
-		switch(dik)
+		switch (dik)
 		{
 		case DIK_NUMPADMINUS:
-			//.HideAll();
-			HUD().GetUI()->HideGameIndicators();
-			return true;
+			UIZoneMap->DecZoom();
 			break;
 		case DIK_NUMPADPLUS:
-			//.ShowAll();
-			HUD().GetUI()->ShowGameIndicators();
-			return true;
+			UIZoneMap->IncZoom();
 			break;
 		}
 	}

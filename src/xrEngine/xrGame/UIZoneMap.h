@@ -7,6 +7,9 @@ class CActor;
 class CUICustomMap;
 //////////////////////////////////////////////////////////////////////////
 
+const float pUpdateZoomFactorByClick	= 0.2;
+const float pMaxZoomFactor				= 2.0;
+const float pMinZoomFactor				= 0.2;
 
 class CUIZoneMap
 {
@@ -18,6 +21,8 @@ class CUIZoneMap
 	CUIStatic					m_compass;
 	CUIStatic					m_clipFrame;
 	CUIStatic					m_pointerDistanceText;
+	CUIStatic					m_zoomText;
+	float						m_fZoomFactor;
 
 public:
 								CUIZoneMap		();
@@ -37,5 +42,12 @@ public:
 
 	CUIStatic&					Background		()									{return m_background;};
 	void						SetupCurrentMap	();
+
+	void						SetZoomFactor	(float value);
+	float						GetZoomFactor	()							const	{return m_fZoomFactor;}
+
+	void						IncZoom			()									{SetZoomFactor(GetZoomFactor() + pUpdateZoomFactorByClick);}
+	void						DecZoom()											{SetZoomFactor(GetZoomFactor() - pUpdateZoomFactorByClick);}
+
 };
 

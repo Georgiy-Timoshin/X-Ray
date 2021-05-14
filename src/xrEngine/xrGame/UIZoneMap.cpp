@@ -20,7 +20,9 @@
 //////////////////////////////////////////////////////////////////////////
 
 CUIZoneMap::CUIZoneMap()
-{}
+{
+	m_fZoomFactor = 1.f;
+}
 
 CUIZoneMap::~CUIZoneMap()
 {
@@ -42,6 +44,9 @@ void CUIZoneMap::Init()
 		xml_init.InitStatic			(uiXml, "minimap:background:dist_text", 0, &m_pointerDistanceText);
 		m_background.AttachChild	(&m_pointerDistanceText);
 	}
+
+	xml_init.InitStatic(uiXml, "minimap:background:zoom_text", 0, &m_zoomText);
+	m_background.AttachChild(&m_zoomText);
 
 	xml_init.InitStatic(uiXml, "minimap:level_frame", 0, &m_clipFrame);
 
@@ -89,6 +94,10 @@ void CUIZoneMap::UpdateRadar		(Fvector pos)
 			m_pointerDistanceText.SetText("");
 		}
 	}
+
+	string64	str;
+	sprintf_s(str, "x%.1f", GetZoomFactor());
+	m_zoomText.SetText(str);
 }
 
 bool CUIZoneMap::ZoomIn()
@@ -119,4 +128,24 @@ void CUIZoneMap::SetupCurrentMap()
 	wnd_size.x						= m_activeMap->BoundRect().width()*zoom_factor;
 	wnd_size.y						= m_activeMap->BoundRect().height()*zoom_factor;
 	m_activeMap->SetWndSize			(wnd_size);
+	SetZoomFactor(1.f);
+}
+
+void CUIZoneMap::SetZoomFactor(float value)
+{
+	if (value > pMaxZoomFactor)
+		value = pMaxZoomFactor;
+
+	if (value < pMinZoomFactor)
+		value = pMinZoomFactor;
+
+	if (m_fZoomFactor == value)
+		return;
+
+	m_fZoomFactor					= value;
+	Fvector2		wnd_size;
+	const float		zoom_factor		= (static_cast<float>(m_clipFrame.GetWndRect().width()) / 100.0f) * value;
+	wnd_size.x						= m_activeMap->BoundRect().width() * zoom_factor;
+	wnd_size.y						= m_activeMap->BoundRect().height() * zoom_factor;
+	m_activeMap->SetWndSize(wnd_size);
 }
